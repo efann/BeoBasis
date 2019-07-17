@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae30d00d-a2b5-491b-abd2-61cb7e3e3dee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeoBasis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BeoBasis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ant/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ant/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java" afterDir="false" />
     </list>
     <ignored path="BeoBasis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ant/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="136">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -568,16 +556,15 @@
       <workItem from="1563373271276" duration="790000" />
       <workItem from="1563374762273" duration="291000" />
       <workItem from="1563375928750" duration="2072000" />
-      <workItem from="1563382542129" duration="7637000" />
+      <workItem from="1563382542129" duration="8348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12467000" />
+    <option name="totallyTimeSpent" value="13178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6732283" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -598,7 +585,7 @@
       <window_info anchor="bottom" id="Changes" order="8" weight="0.32909784" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3229491" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3229491" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32917964" />
       <window_info anchor="bottom" id="SVN Properties" order="13" weight="0.32928064" />
       <window_info anchor="bottom" id="SVN Repositories" order="14" weight="0.32928064" />
@@ -606,7 +593,7 @@
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.67408377" visible="true" weight="0.16897655" />
+      <window_info active="true" anchor="right" id="Ant Build" order="1" sideWeight="0.67408377" visible="true" weight="0.16897655" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.16713287" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" />
@@ -962,8 +949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="136">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
         </state>
       </provider>
     </entry>

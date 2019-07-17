@@ -12,7 +12,7 @@
 
   <property name="project.title" value="BeoBasis"/>
   <property name="project.name" value="BeoBasis"/>
-  <property name="project.version" value="2.0.1"/>
+  <property name="project.version" value="2.0.4"/>
   <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
   <property name="project.jar.filename.unsigned" value="${project.name}-unsigned.jar"/>
 

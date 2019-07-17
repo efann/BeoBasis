@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BeoBasis" default="build" basedir=".">
+
+  <property name="includeantruntime" value="false"/>
+  <property name="dirs.base" value="${basedir}"/>
+  <property name="src" value="${dirs.base}"/>
+  <property name="root.path" value=".."/>
+  <property name="idea.out.path" value="${root.path}/out"/>
+
+  <property name="project.title" value="BeoBasis"/>
+  <property name="project.name" value="BeoBasis"/>
+  <property name="project.version" value="1.35"/>
+  <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
+  <property name="project.jar.filename.unsigned" value="${project.name}-${project.version}-unsigned.jar"/>
+
+  <property name="project.jar" value="${root.path}/${project.name}-${project.version}.jar"/>
+
+  <property name="IDE.WorkSpace.Root" value="d:/Eclipse"/>
+  <property name="ExternalLibraryPath" value="${IDE.WorkSpace.Root}/ExternalLibraries"/>
+  <property name="zip.files.dir" value="${IDE.WorkSpace.Root}/ZipFiles/${project.name}"/>
+
+  <tstamp>
+    <format property="buildtime.isoformat" pattern="yyyy-MM-dd HH:mm:ss"/>
+  </tstamp>
+
+  <echo>Java Version ${ant.java.version}</echo>
+  <echo>Ant Version ${ant.version}</echo>
+  <echo>Ant Home ${ant.home}</echo>
+
+  <target depends="buildManifest, buildClasses, buildJar, signJar, buildZip, copyAppFiles" name="build"/>
+
+  <!-- Recreate the manifest for the project -->
+  <target name="buildManifest">
+    <manifest file="${src}/META-INF/Manifest.mf">
+      <attribute name="Manifest-Version" value="1.0"/>
+      <attribute name="Implementation-Vendor" value="Beowurks"/>
+      <attribute name="Implementation-Version" value="${project.version}"/>
+      <attribute name="Implementation-Title" value="${project.title}"/>
+      <attribute name="Built-On" value="${buildtime.isoformat}"/>
+      <attribute name="Permissions" value="all-permissions"/>
+      <attribute name="Application-Name" value="${project.name}"/>
+      <attribute name="Codebase" value="*"/>
+    </manifest>
+  </target>
+
+  <!-- Build all of the classes. -->
+  <target name="buildClasses">
+    <!-- I want all files recompiled each time. -->
+    <delete>
+      <fileset dir="${src}" includes="**/*.class"/>
+    </delete>
+
+    <javac srcdir="${src}" destdir="${src}" debug="false" includes="**/*.java" source="1.7" target="1.7"
+           includeantruntime="false">
+      <compilerarg value="-Xlint"/>
+    </javac>
+  </target>
+
+  <!-- Remove then create the project Jar file -->
+  <target name="buildJar">
+    <delete>
+      <fileset dir="${root.path}/" includes="${project.name}*.jar"/>
+    </delete>
+
+    <jar destfile="${project.jar}" basedir="${src}" manifest="${src}/META-INF/MANIFEST.MF"
+         excludes="**/*.bak **/*.java manifest.txt build.xml **/*.classpath **/*.project **/*.prefs">
+    </jar>
+  </target>
+
+  <target name="signJar">
+    <copy file="${root.path}/${project.jar.filename}" tofile="${root.path}/${project.jar.filename.unsigned}"/>
+
+    <!--
+        http://ant.apache.org/manual/CoreTasks/ant.html
+        If you use location rather than value, the absolute file path is used
+        which is needed by the GenerateKey build.xml.
+    -->
+    <ant inheritAll="false" antfile="${IDE.WorkSpace.Root}/WorkSpace/Stamp/build.xml" inheritrefs="false">
+      <property name="sign.project.jars" value="${project.jar.filename}"/>
+      <property name="sign.project.dir" location="${root.path}"/>
+    </ant>
+    <!-- The BeoBasis-version.jar will be uploaded to the web. However, -->
+    <!-- I'm generating both BeoBasis.jar and BeoBasis-version.jar in the project
+            directory -->
+    <!-- as the Eclipse library setting refers to BeoBasis.jar. This way, everytime
+            I change -->
+    <!-- the version, I don't have to change the reference. -->
+    <copy file="${root.path}/${project.jar.filename}" tofile="${root.path}/${project.name}.jar"/>
+  </target>
+
+  <!-- Now create the Zip file with the relevant source code in ${IDE.WorkSpace.Root}/ZipFiles
+        directory. -->
+  <!-- Now create the Zip file with the relevant source code in ${IDE.WorkSpace.Root}/ZipFiles directory. -->
+  <target name="buildZip">
+    <mkdir dir="${zip.files.dir}"/>
+
+    <delete>
+      <fileset dir="${zip.files.dir}" includes="*.*"/>
+    </delete>
+
+    <zip zipfile="${zip.files.dir}/${project.name}-${project.version}-src.zip" basedir="${src}"
+         excludes="**/*.bak **/*.class manifest.txt **/*.classpath **/*.project **/*.prefs build"/>
+  </target>
+
+  <!-- Now copy program files to ${IDE.WorkSpace.Root}/ZipFiles directory. -->
+  <target name="copyAppFiles">
+    <copy file="${root.path}/${project.jar.filename}" todir="${zip.files.dir}"/>
+  </target>
+
+</project>

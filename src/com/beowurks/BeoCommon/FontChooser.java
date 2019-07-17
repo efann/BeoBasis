@@ -129,7 +129,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
   {
     final Object loValue = this.spnFontSize1.getValue();
 
-    int lnValue = 1;
+    int lnValue;
 
     try
     {

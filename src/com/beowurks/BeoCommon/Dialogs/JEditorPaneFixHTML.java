@@ -27,6 +27,10 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
 
   private final JScrollPane foScrollPane = new JScrollPane();
 
+  // Gets rid of the following error:
+  // serializable class has no definition of serialVersionUID
+  private static final long serialVersionUID = 1L;
+
   // ---------------------------------------------------------------------------
   public JEditorPaneFixHTML()
   {

@@ -85,7 +85,7 @@ public final class LFCommon
         {
           final String lcMetalTheme = (!tcMetalTheme.isEmpty()) ? tcMetalTheme : "DefaultMetalTheme";
           final Class<?> loClass = LFCommon.loadClass(lcMetalTheme);
-          MetalLookAndFeel.setCurrentTheme((MetalTheme) (loClass.newInstance()));
+          MetalLookAndFeel.setCurrentTheme((MetalTheme) loClass.getDeclaredConstructor().newInstance());
         }
 
         try

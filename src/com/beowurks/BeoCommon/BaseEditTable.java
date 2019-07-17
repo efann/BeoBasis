@@ -14,13 +14,6 @@
 
 package com.beowurks.BeoCommon;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
-import java.util.Vector;
-
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -31,6 +24,12 @@ import javax.swing.UIManager;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.util.Vector;
 
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
@@ -78,7 +77,7 @@ public class BaseEditTable extends JTable
   }
 
   // ---------------------------------------------------------------------------
-  public BaseEditTable(final Vector<? extends Vector> taRowData, final Vector<?> taColumnNames)
+  public BaseEditTable(Vector<? extends Vector> taRowData, Vector<?> taColumnNames)
   {
     super(taRowData, taColumnNames);
     this.setupInputMap();
@@ -112,15 +111,15 @@ public class BaseEditTable extends JTable
     this.getActionMap().put("DownGridCell", new GridCellAction(GridCellAction.MOVE_DOWN));
 
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_TAB, 0),
-            "TabGridCell");
+        "TabGridCell");
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0),
-            "TabGridCell");
+        "TabGridCell");
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_UP, 0),
-            "UpGridCell");
+        "UpGridCell");
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0),
-            "DownGridCell");
+        "DownGridCell");
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke("shift TAB"),
-            "ShiftTabGridCell");
+        "ShiftTabGridCell");
   }
 
   // ---------------------------------------------------------------------------
@@ -284,7 +283,7 @@ class ButtonEnabledRenderer extends JButton implements TableCellRenderer
   {
     final JButton loButton = this;
     loButton.setForeground(toTable.isEnabled() ? this.foOriginalForeColor : UIManager
-            .getColor("Label.disabledForeground"));
+        .getColor("Label.disabledForeground"));
 
     loButton.setText((toValue == null) ? "" : toValue.toString());
 

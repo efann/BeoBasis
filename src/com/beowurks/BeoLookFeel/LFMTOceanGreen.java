@@ -14,12 +14,11 @@
 
 package com.beowurks.BeoLookFeel;
 
-import java.awt.Color;
-import java.util.Arrays;
-
 import javax.swing.UIDefaults;
 import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.metal.OceanTheme;
+import java.awt.Color;
+import java.util.Arrays;
 
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
@@ -90,8 +89,8 @@ public class LFMTOceanGreen extends OceanTheme
   {
     super.addCustomEntriesToTable(toTable);
 
-    final java.util.List<Object> laButtonGradient = Arrays.asList(new Object[]{new Float(.3f), new Float(0f),
-            new ColorUIResource(0xCCFFFF), this.getWhite(), new ColorUIResource(0xAAFFFF)});
+    final java.util.List<Object> laButtonGradient = Arrays.asList(new Object[]{Float.valueOf(.3f), Float.valueOf(0f),
+        new ColorUIResource(0xCCFFFF), this.getWhite(), new ColorUIResource(0xAAFFFF)});
 
     toTable.put("Button.gradient", laButtonGradient);
     toTable.put("CheckBoxMenuItem.gradient", laButtonGradient);

@@ -45,6 +45,10 @@ public class DialogCredits extends BaseDialog implements ActionListener
 
   private final Vector<ICredit> foVectorLinks;
 
+  // Gets rid of the following error:
+  // serializable class has no definition of serialVersionUID
+  private static final long serialVersionUID = 1L;
+
   // ---------------------------------------------------------------------------
   public DialogCredits(final JFrame toFrame, final Vector<ICredit> toVectorLinks)
   {

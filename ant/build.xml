@@ -8,14 +8,15 @@
   <property name="src" value="${dirs.base}/src"/>
 
   <property name="idea.out.path" value="${root.path}/out"/>
+  <property name="project.output.dir" value="${idea.out.path}/production/BeoBasis"/>
 
   <property name="project.title" value="BeoBasis"/>
   <property name="project.name" value="BeoBasis"/>
   <property name="project.version" value="2.0.1"/>
   <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
-  <property name="project.jar.filename.unsigned" value="${project.name}-${project.version}-unsigned.jar"/>
+  <property name="project.jar.filename.unsigned" value="${project.name}-unsigned.jar"/>
 
-  <property name="project.jar" value="${root.path}/${project.name}-${project.version}.jar"/>
+  <property name="project.jar" value="${root.path}/${project.jar.filename}"/>
 
   <property name="IDE.WorkSpace.Root" value="d:/Eclipse"/>
   <property name="ExternalLibraryPath" value="${IDE.WorkSpace.Root}/ExternalLibraries"/>
@@ -25,9 +26,9 @@
     <format property="buildtime.isoformat" pattern="yyyy-MM-dd HH:mm:ss"/>
   </tstamp>
 
-  <echo>Java Version ${ant.java.version}</echo>
-  <echo>Ant Version ${ant.version}</echo>
-  <echo>Ant Home ${ant.home}</echo>
+  <echo level="info">Java Version ${ant.java.version}</echo>
+  <echo level="info">Ant Version ${ant.version}</echo>
+  <echo level="info">Ant Home ${ant.home}</echo>
 
   <target depends="buildManifest, buildClasses, buildJar, signJar, buildZip, copyAppFiles" name="build"/>
 
@@ -52,7 +53,9 @@
       <fileset dir="${src}" includes="**/*.class"/>
     </delete>
 
-    <javac srcdir="${src}" destdir="${src}" debug="false" includes="**/*.java" includeantruntime="false">
+    <mkdir dir="${project.output.dir}"/>
+
+    <javac srcdir="${src}" destdir="${project.output.dir}" debug="false" includes="**/*.java" includeantruntime="false">
       <compilerarg value="-Xlint"/>
     </javac>
   </target>
@@ -63,12 +66,17 @@
       <fileset dir="${root.path}/" includes="${project.name}*.jar"/>
     </delete>
 
-    <jar destfile="${project.jar}" basedir="${src}" manifest="${src}/META-INF/MANIFEST.MF"
+    <jar destfile="${project.jar}" basedir="${project.output.dir}" manifest="${src}/META-INF/MANIFEST.MF"
          excludes="**/*.bak **/*.java manifest.txt build.xml **/*.classpath **/*.project **/*.prefs">
     </jar>
   </target>
 
   <target name="signJar">
+    <!-- The BeoBasis-version.jar will be uploaded to the web. However, -->
+    <!-- I'm generating both BeoBasis-unsigned.jar and BeoBasis-version.jar in the project
+            directory -->
+    <!-- as the IntelliJ library setting refers to BeoBasis.jar. This way, everytime
+            I change the version, I don't have to change the reference. -->
     <copy file="${root.path}/${project.jar.filename}" tofile="${root.path}/${project.jar.filename.unsigned}"/>
 
     <!--
@@ -80,13 +88,6 @@
       <property name="sign.project.jars" value="${project.jar.filename}"/>
       <property name="sign.project.dir" location="${root.path}"/>
     </ant>
-    <!-- The BeoBasis-version.jar will be uploaded to the web. However, -->
-    <!-- I'm generating both BeoBasis.jar and BeoBasis-version.jar in the project
-            directory -->
-    <!-- as the Eclipse library setting refers to BeoBasis.jar. This way, everytime
-            I change -->
-    <!-- the version, I don't have to change the reference. -->
-    <copy file="${root.path}/${project.jar.filename}" tofile="${root.path}/${project.name}.jar"/>
   </target>
 
   <!-- Now create the Zip file with the relevant source code in ${IDE.WorkSpace.Root}/ZipFiles

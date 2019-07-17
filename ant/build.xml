@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="BeoBasis" default="build" basedir=".">
+<project name="BeoBasis" default="build">
+
+  <property name="root.path" value=".."/>
 
   <property name="includeantruntime" value="false"/>
-  <property name="dirs.base" value="${basedir}"/>
-  <property name="src" value="${dirs.base}"/>
-  <property name="root.path" value=".."/>
+  <property name="dirs.base" value="${root.path}"/>
+  <property name="src" value="${dirs.base}/src"/>
+
   <property name="idea.out.path" value="${root.path}/out"/>
 
   <property name="project.title" value="BeoBasis"/>
   <property name="project.name" value="BeoBasis"/>
-  <property name="project.version" value="1.35"/>
+  <property name="project.version" value="2.0.1"/>
   <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
   <property name="project.jar.filename.unsigned" value="${project.name}-${project.version}-unsigned.jar"/>
 
@@ -50,8 +52,7 @@
       <fileset dir="${src}" includes="**/*.class"/>
     </delete>
 
-    <javac srcdir="${src}" destdir="${src}" debug="false" includes="**/*.java" source="1.7" target="1.7"
-           includeantruntime="false">
+    <javac srcdir="${src}" destdir="${src}" debug="false" includes="**/*.java" includeantruntime="false">
       <compilerarg value="-Xlint"/>
     </javac>
   </target>

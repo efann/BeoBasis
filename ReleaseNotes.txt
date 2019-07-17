@@ -1,6 +1,0 @@
-BeoBasis
-Version 1.14
-
-1) Updated error checking in com.beowurks.apple.eawt.OSXAdapter.
-
-2) Added the tcFileName parameter to the FileHandler method in com.beowurks.apple.eawt.IOSXAdapter.

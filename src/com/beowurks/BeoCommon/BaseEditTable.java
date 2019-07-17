@@ -78,7 +78,7 @@ public class BaseEditTable extends JTable
   }
 
   // ---------------------------------------------------------------------------
-  public BaseEditTable(final Vector<?> taRowData, final Vector<?> taColumnNames)
+  public BaseEditTable(final Vector<? extends Vector> taRowData, final Vector<?> taColumnNames)
   {
     super(taRowData, taColumnNames);
     this.setupInputMap();

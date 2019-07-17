@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ =============================================================================
+  ~ BeoBasis: a library of common routines for Java programs written by
+  ~           Beowurks.
+  ~ =============================================================================
+  ~ Copyright(c) 2001-2019, by Beowurks.
+  ~
+  ~ This application is open-source software; you can redistribute it and/or modify it
+  ~ under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+  ~
+  ~ Original Author:  Eddie Fann
+  ~ Contributor(s):   -;
+  -->
+
 <project name="BeoBasis" default="build">
 
   <property name="root.path" value=".."/>
@@ -12,7 +26,7 @@
 
   <property name="project.title" value="BeoBasis"/>
   <property name="project.name" value="BeoBasis"/>
-  <property name="project.version" value="2.0.4"/>
+  <property name="project.version" value="2.0.5"/>
   <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
   <property name="project.jar.filename.unsigned" value="${project.name}-unsigned.jar"/>
 
@@ -21,6 +35,17 @@
   <property name="IDE.WorkSpace.Root" value="d:/Eclipse"/>
   <property name="ExternalLibraryPath" value="${IDE.WorkSpace.Root}/ExternalLibraries"/>
   <property name="zip.files.dir" value="${IDE.WorkSpace.Root}/ZipFiles/${project.name}"/>
+
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
 
   <tstamp>
     <format property="buildtime.isoformat" pattern="yyyy-MM-dd HH:mm:ss"/>
@@ -55,9 +80,17 @@
 
     <mkdir dir="${project.output.dir}"/>
 
-    <javac srcdir="${src}" destdir="${project.output.dir}" debug="false" includes="**/*.java" includeantruntime="false">
+    <javac srcdir="${src}" destdir="${project.output.dir}" debug="false" includeantruntime="false">
       <compilerarg value="-Xlint"/>
     </javac>
+
+    <copy todir="${project.output.dir}">
+      <fileset dir="${src}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+
   </target>
 
   <!-- Remove then create the project Jar file -->
@@ -67,7 +100,8 @@
     </delete>
 
     <jar destfile="${project.jar}" basedir="${project.output.dir}" manifest="${src}/META-INF/MANIFEST.MF"
-         excludes="**/*.bak **/*.java manifest.txt build.xml **/*.classpath **/*.project **/*.prefs">
+         excludes="**/*.bak **/*.java manifest.txt build.xml **/*.classpath **/*.project **/*.prefs"
+    >
     </jar>
   </target>
 

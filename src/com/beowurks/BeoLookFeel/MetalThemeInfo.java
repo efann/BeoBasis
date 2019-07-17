@@ -12,34 +12,15 @@
  * Contributor(s):   -;
  */
 
-package com.beowurks.BeoZippin;
-
-import com.beowurks.BeoCommon.CancelDialog;
-
-import javax.swing.JLabel;
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
+package com.beowurks.BeoLookFeel;
 
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-public interface IZipProgressComponents
+public class MetalThemeInfo
 {
-  // ---------------------------------------------------------------------------
-  JLabel getActionDescriptionLabel();
-
-  // ---------------------------------------------------------------------------
-  JTextField getCurrentFileTextField();
-
-  // ---------------------------------------------------------------------------
-  JProgressBar getCurrentFileProgressBar();
-
-  // ---------------------------------------------------------------------------
-  JProgressBar getCurrentOperationProgressBar();
-
-  // ---------------------------------------------------------------------------
-  CancelDialog getCancelDialog();
-  // ---------------------------------------------------------------------------
+  protected String fcName;
+  protected String fcClassName;
 }
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------

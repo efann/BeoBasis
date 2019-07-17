@@ -3,7 +3,7 @@
  * BeoBasis: a library of common routines for Java programs written by
  *           Beowurks.
  * =============================================================================
- * Copyright(c) 2001-2015, by Beowurks.
+ * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
  * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
@@ -70,6 +70,10 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
 
   private final IAbout foAbout;
 
+  // Gets rid of the following error:
+  // serializable class has no definition of serialVersionUID
+  private static final long serialVersionUID = 1L;
+  
   // ---------------------------------------------------------------------------
   public DialogAbout(final JFrame toFrame, final IAbout toAbout)
   {

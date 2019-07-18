@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -24,9 +24,9 @@ import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.table.TableCellRenderer;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class SortButtonRenderer extends JButton implements TableCellRenderer
 {
   public static final int STATE_NONE = 0;
@@ -45,7 +45,7 @@ public class SortButtonRenderer extends JButton implements TableCellRenderer
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SortButtonRenderer()
   {
     final Dimension ldButtonSize = new Dimension((int) this.getPreferredSize().getWidth(), 20);
@@ -82,7 +82,7 @@ public class SortButtonRenderer extends JButton implements TableCellRenderer
     // this.btnDown.setDefaultCapable(false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public Component getTableCellRendererComponent(final JTable toTable, final Object toValue,
                                                  final boolean tlIsSelected, final boolean tlHasFocus, final int tnRow, final int tnColumn)
@@ -110,19 +110,19 @@ public class SortButtonRenderer extends JButton implements TableCellRenderer
     return (loButton);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setPressedColumn(final int tnColumn)
   {
     this.fnCurrentPressedButton = tnColumn;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setSortColumn(final int tnColumn)
   {
     this.fnSortColumn = tnColumn;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setSortColumn(final int tnColumn, final boolean tlToggle, final int tnSortState)
   {
     if (tlToggle)
@@ -158,13 +158,13 @@ public class SortButtonRenderer extends JButton implements TableCellRenderer
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean isCurrentColumnAscending()
   {
     return (this.fnSortState == SortButtonRenderer.STATE_UP);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

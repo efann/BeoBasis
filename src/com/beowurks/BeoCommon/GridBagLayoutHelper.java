@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -18,9 +18,9 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class GridBagLayoutHelper extends GridBagLayout
 {
   private final GridBagConstraints foConstraints = new GridBagConstraints();
@@ -29,7 +29,7 @@ public class GridBagLayoutHelper extends GridBagLayout
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public GridBagLayoutHelper()
   {
     this.foConstraints.insets = new Insets(4, 4, 4, 4);
@@ -38,7 +38,7 @@ public class GridBagLayoutHelper extends GridBagLayout
     this.foConstraints.ipady = 2;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setInsets(final int tnTop, final int tnLeft, final int tnBottom, final int tnRight)
   {
     this.foConstraints.insets.top = tnTop;
@@ -47,7 +47,7 @@ public class GridBagLayoutHelper extends GridBagLayout
     this.foConstraints.insets.right = tnRight;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setInsetDefaults()
   {
     this.foConstraints.insets.top = 4;
@@ -56,13 +56,13 @@ public class GridBagLayoutHelper extends GridBagLayout
     this.foConstraints.insets.right = 4;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public GridBagConstraints getConstraint(final int tnCol, final int tnRow, final int tnAnchor, final int tnFill)
   {
     return (this.getConstraint(tnCol, tnRow, 1, 1, tnAnchor, tnFill));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public GridBagConstraints getConstraint(final int tnCol, final int tnRow, final int tnWidth, final int tnHeight,
                                           final int tnAnchor, final int tnFill)
   {
@@ -98,8 +98,8 @@ public class GridBagLayoutHelper extends GridBagLayout
 
     return (this.foConstraints);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

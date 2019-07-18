@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -22,9 +22,9 @@ import java.util.Date;
 
 import javax.swing.JLabel;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ThreadExtract extends Thread
 {
   private final BaseFrame foFrame;
@@ -36,7 +36,7 @@ public class ThreadExtract extends Thread
   private final boolean flUsePath;
   private final boolean flOverwriteExisting;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ThreadExtract(final BaseFrame toFrame, final IZipProgressComponents toZipProgressComponents,
                        final String tcArchiveName, final ZipTable toZipTable, final String tcStartDirectory, final boolean tlUsePath,
                        final boolean tlOverwriteExisting)
@@ -53,7 +53,7 @@ public class ThreadExtract extends Thread
     this.flOverwriteExisting = tlOverwriteExisting;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void run()
   {
@@ -114,8 +114,8 @@ public class ThreadExtract extends Thread
                       + ")</i><br></font></html>"));
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

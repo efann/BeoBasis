@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -42,9 +42,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.EtchedBorder;
 import javax.swing.table.DefaultTableModel;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class EventDisplayDialog extends BaseDialog implements ActionListener, Runnable
 {
   public final static int IMAGE_CHECK = 0;
@@ -81,7 +81,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public EventDisplayDialog(final JFrame toFrame, final String tcTitle)
   {
     super(toFrame, tcTitle);
@@ -97,7 +97,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public EventDisplayDialog(final JFrame toFrame, final String tcTitle, final boolean tlAutoClose, final File toLogFile)
   {
     super(toFrame, tcTitle);
@@ -116,7 +116,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void jbInit() throws Exception
   {
@@ -134,7 +134,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     this.setupLayouts();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLogFile(final File toLogFile)
   {
     if (toLogFile == null)
@@ -157,7 +157,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupImages()
   {
     final int lnCount = this.faImageURLs.length;
@@ -180,7 +180,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLabels()
   {
     this.lblTimeLapsed1.setText("<html><font face=\"Arial\"><i>" + this.getTitle()
@@ -190,7 +190,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     this.lblTitle1.setFont(this.lblTitle1.getFont().deriveFont(Font.ITALIC));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupButtons()
   {
     this.btnClose1.setText("Close");
@@ -200,7 +200,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     this.btnClose1.setEnabled(false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLayouts()
   {
     this.boxButtons1.add(this.btnClose1, null);
@@ -226,13 +226,13 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
             loGrid.getConstraint(0, 4, GridBagConstraints.CENTER, GridBagConstraints.NONE));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.btnClose1.addActionListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupTables()
   {
     this.grdEvents1.setShowHorizontalLines(false);
@@ -256,7 +256,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     this.grdEvents1.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupProgressBars()
   {
     final Dimension ldSize = new Dimension(EventDisplayDialog.PREFERRED_WIDTH, (int) this.barEventProgress1
@@ -270,7 +270,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     this.barEventProgress1.setStringPainted(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void updateProgressbar(final int tnPercentage)
   {
     this.barEventProgress1.setValue(tnPercentage);
@@ -278,7 +278,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     SwingUtilities.invokeLater(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void updateLines(final String tcMessage, final int tnImageType)
   {
     this.updateLog(tcMessage);
@@ -288,7 +288,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     SwingUtilities.invokeLater(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void updateLog(final String tcMessage)
   {
     if (this.foLogWriter == null)
@@ -306,7 +306,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void closeLog()
   {
     if (this.foLogWriter == null)
@@ -323,7 +323,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void enableCloseButton(final boolean tlEnabled)
   {
     final String lcTimeDifference = Util.displayTimeDifference(this.foStartTime, new Date(), 1);
@@ -343,10 +343,10 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void actionPerformed(final ActionEvent toEvent)
   {
@@ -361,10 +361,10 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void run()
   {
@@ -381,19 +381,19 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
 
     this.barEventProgress1.updateUI();
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 class EventTableModel extends DefaultTableModel
 {
   // Gets rid of the following error:
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public EventTableModel()
   {
 
@@ -402,14 +402,14 @@ class EventTableModel extends DefaultTableModel
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public boolean isCellEditable(final int row, final int column)
   {
     return (false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public Class<?> getColumnClass(final int tnColumn)
   {
@@ -428,8 +428,8 @@ class EventTableModel extends DefaultTableModel
 
     return (loObject.getClass());
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

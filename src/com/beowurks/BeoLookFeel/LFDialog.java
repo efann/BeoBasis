@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -39,9 +39,9 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class LFDialog extends BaseDialog implements ActionListener
 {
   private final BaseButton btnOk1 = new BaseButton();
@@ -62,7 +62,7 @@ public class LFDialog extends BaseDialog implements ActionListener
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public LFDialog(final JFrame toFrame)
   {
     super(toFrame, "Look & Feel Options");
@@ -78,7 +78,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void jbInit() throws Exception
   {
@@ -93,7 +93,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.setupLayouts();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupButtons()
   {
     this.btnOk1.setToolTipText("Accept any changes to the Look & Feel");
@@ -103,7 +103,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.btnCancel1.setText("Cancel");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupOptionGroups() throws Exception
   {
     if ((this.pnlLookFeels1 == null) || (this.pnlThemes1 == null))
@@ -157,7 +157,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupPanels()
   {
     final Border loBorder = new CompoundBorder(new SoftBevelBorder(BevelBorder.LOWERED), new EmptyBorder(5, 5, 5, 5));
@@ -175,7 +175,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.pnlThemes1.setBorder(loBorder);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupTabPanes() throws Exception
   {
     if ((this.pnlLookFeels1 == null) || (this.pnlThemes1 == null))
@@ -195,7 +195,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.setMetalTabVisibility();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.btnOk1.addActionListener(this);
@@ -224,7 +224,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLayouts()
   {
     this.boxButtons1.add(this.btnOk1, null);
@@ -240,7 +240,7 @@ public class LFDialog extends BaseDialog implements ActionListener
             loGridBag.getConstraint(0, 5, GridBagConstraints.CENTER, GridBagConstraints.NONE));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Only the Metal Look & Feel has themes.
   private void setMetalTabVisibility()
   {
@@ -249,7 +249,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.tabPane1.setEnabledAt(1, LFCommon.isMetalLookAndFeel(lcLF));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void removeListeners()
   {
@@ -281,10 +281,10 @@ public class LFDialog extends BaseDialog implements ActionListener
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void actionPerformed(final ActionEvent e)
   {
@@ -321,9 +321,9 @@ public class LFDialog extends BaseDialog implements ActionListener
       }
     }
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

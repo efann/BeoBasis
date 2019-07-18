@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -26,9 +26,9 @@ import javax.swing.border.Border;
 import javax.swing.border.SoftBevelBorder;
 
 // Class SmallToggleButton unchanged from chapter 12
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class SmallToggleButton extends JToggleButton implements ItemListener
 {
   protected Border foRaised = new SoftBevelBorder(BevelBorder.RAISED);
@@ -39,7 +39,7 @@ public class SmallToggleButton extends JToggleButton implements ItemListener
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SmallToggleButton(final boolean tlSelected, final ImageIcon toImgUnselected, final ImageIcon toImgSelected,
                            final String tcTip)
   {
@@ -54,14 +54,14 @@ public class SmallToggleButton extends JToggleButton implements ItemListener
     this.addItemListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public float getAlignmentY()
   {
     return (0.5f);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Overridden for 1.4 bug fix
   @Override
   public Insets getInsets()
@@ -69,21 +69,21 @@ public class SmallToggleButton extends JToggleButton implements ItemListener
     return (this.foInset);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public Border getBorder()
   {
     return (this.isSelected() ? this.foLowered : this.foRaised);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void itemStateChanged(final ItemEvent e)
   {
     this.setBorder(this.isSelected() ? this.foLowered : this.foRaised);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

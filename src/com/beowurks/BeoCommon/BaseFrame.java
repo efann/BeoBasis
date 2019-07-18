@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -32,9 +32,9 @@ import javax.swing.JMenuItem;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 abstract public class BaseFrame extends JFrame
 {
   static private final boolean flLinuxOS = (System.getProperty("os.name").toLowerCase().contains("linux"));
@@ -51,7 +51,7 @@ abstract public class BaseFrame extends JFrame
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFrame()
   {
 
@@ -62,7 +62,7 @@ abstract public class BaseFrame extends JFrame
     this.setCallingFrameCursor(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFrame(final String tcTitle, final boolean tlPackFrame)
   {
     super(tcTitle);
@@ -75,7 +75,7 @@ abstract public class BaseFrame extends JFrame
     this.setCallingFrameCursor(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Component initialization
   protected void jbInit() throws Exception
   {
@@ -84,7 +84,7 @@ abstract public class BaseFrame extends JFrame
     this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Overridden so we can exit when window is closed
   @Override
   protected void processWindowEvent(final WindowEvent e)
@@ -120,7 +120,7 @@ abstract public class BaseFrame extends JFrame
     super.processWindowEvent(e);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void switchToTopModalWindow()
   {
     final Dialog loDialog = Util.getTopModalWindow();
@@ -137,7 +137,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public JFrame getActiveFrame()
   {
     final Frame[] laFrames = Frame.getFrames();
@@ -176,7 +176,7 @@ abstract public class BaseFrame extends JFrame
     return (null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void centerFrame()
   {
     if (this.flPackFrame)
@@ -204,14 +204,14 @@ abstract public class BaseFrame extends JFrame
     this.setLocation((ldScreenSize.width - ldFrameSize.width) / 2, (ldScreenSize.height - ldFrameSize.height) / 2);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void setLocation(final Point p)
   {
     this.setLocation((int) p.getX(), (int) p.getY());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void setLocation(final int x, final int y)
   {
@@ -236,7 +236,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got the following code from
   // http://java.sun.com/developer/JDCTechTips/2003/tt1208.html#1
   public void makeVisible(final boolean tlCenter)
@@ -244,7 +244,7 @@ abstract public class BaseFrame extends JFrame
     this.makeVisible(tlCenter, true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got the following code from
   // http://java.sun.com/developer/JDCTechTips/2003/tt1208.html#1
   // By the way, I added the new parameter of tlUseInvokeLater as sometimes this
@@ -304,7 +304,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void setCallingFrameCursor(final boolean tlBusy)
   {
     if (this.foCallingFrame != null)
@@ -316,13 +316,13 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy)
   {
     this.setBusy(tlBusy, true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy, final boolean tlIncludeFocusRoutines)
   {
     if (tlBusy)
@@ -335,7 +335,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I created this because there isn't a programmatic closing method for a
   // JFrame.
   public void closeWindow()
@@ -343,13 +343,13 @@ abstract public class BaseFrame extends JFrame
     Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void releasePointers()
   {
     this.setJMenuBar(null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I used to share the actual menu between JFrames, and when the particular
   // JFrame was inactive, I would have a duplicate menu bar placed on the
   // frame. Problem was that the drop-down menu (JPopupMenu) of the real menu
@@ -375,7 +375,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void addMenuActionCommands(final JMenuBar toMenuBar)
   {
     final int lnCount = toMenuBar.getMenuCount();
@@ -399,7 +399,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void copyAllListeners(final JMenuBar toMenuBarToCopy)
   {
     final int lnCount = toMenuBarToCopy.getMenuCount();
@@ -437,7 +437,7 @@ abstract public class BaseFrame extends JFrame
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void copyAllMenuItems(final JMenuBar toMenuBarToCopy)
   {
     final int lnCount = toMenuBarToCopy.getMenuCount();
@@ -478,7 +478,7 @@ abstract public class BaseFrame extends JFrame
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I created this because there isn't a good reliable destructor procedure in
   // Java.
   public final void cleanUp()
@@ -488,17 +488,17 @@ abstract public class BaseFrame extends JFrame
     this.releasePointers();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void finalOperations()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void removeListeners()
   {
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

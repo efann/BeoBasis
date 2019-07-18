@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -27,9 +27,9 @@ import javax.swing.WindowConstants;
 import javax.swing.event.InternalFrameEvent;
 import javax.swing.event.InternalFrameListener;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BaseInternalFrame extends JInternalFrame implements InternalFrameListener
 {
   private boolean flResetActiveFrameCursor = true;
@@ -38,7 +38,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseInternalFrame()
   {
     super("", true, true, true, true);
@@ -46,7 +46,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     this.setBusy(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseInternalFrame(final String tcTitle)
   {
     super(tcTitle, true, true, true, true);
@@ -54,7 +54,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     this.setBusy(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void jbInit() throws Exception
   {
     this.addInternalFrameListener(this);
@@ -63,7 +63,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public JInternalFrame getActiveFrame()
   {
     final JFrame loActiveFrame = BaseFrame.getActiveFrame();
@@ -77,7 +77,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     return ((loDesktopPane != null) ? loDesktopPane.getSelectedFrame() : null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JFrame getParentFrame()
   {
     final Window loWindow = SwingUtilities.getWindowAncestor(this);
@@ -95,7 +95,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     return (loFrame);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void centerFrame()
   {
     this.pack();
@@ -118,7 +118,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got the following code from
   // http://java.sun.com/developer/JDCTechTips/2003/tt1208.html#1
   public void makeVisible(final boolean tlCenter)
@@ -126,7 +126,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     this.makeVisible(tlCenter, true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got the following code from
   // http://java.sun.com/developer/JDCTechTips/2003/tt1208.html#1
   // By the way, I added the new parameter of tlUseInvokeLater as sometimes this
@@ -190,13 +190,13 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy)
   {
     this.setBusy(tlBusy, true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy, final boolean tlIncludeFocusRoutines)
   {
     // With these JInternalFrames, you should set the cursor on the active
@@ -211,7 +211,7 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I created this because there isn't a good reliable destructor procedure in
   // Java.
   public final void cleanUp()
@@ -221,56 +221,56 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     this.releasePointers();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void finalOperations()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void removeListeners()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void releasePointers()
   {
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface InternalFrameListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameOpened(final InternalFrameEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameClosing(final InternalFrameEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameClosed(final InternalFrameEvent e)
   {
     this.cleanUp();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameIconified(final InternalFrameEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameDeiconified(final InternalFrameEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameActivated(final InternalFrameEvent e)
   {
@@ -281,14 +281,14 @@ public class BaseInternalFrame extends JInternalFrame implements InternalFrameLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void internalFrameDeactivated(final InternalFrameEvent e)
   {
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

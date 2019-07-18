@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -20,9 +20,9 @@ import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.border.EmptyBorder;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BaseButton extends JButton
 {
   public static final int BASE_WIDTH = 90;
@@ -32,7 +32,7 @@ public class BaseButton extends JButton
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseButton()
   {
 
@@ -41,7 +41,7 @@ public class BaseButton extends JButton
     this.setCursor(new Cursor(Cursor.HAND_CURSOR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseButton(final int tnWidth, final int tnHeight)
   {
 
@@ -50,7 +50,7 @@ public class BaseButton extends JButton
     this.setCursor(new Cursor(Cursor.HAND_CURSOR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void resetDimensions(final int tnWidth, final int tnHeight)
   {
     // Otherwise, you'll have a large blank area on the left and right of the button face.
@@ -70,8 +70,8 @@ public class BaseButton extends JButton
     // the incredible shrinking button problem in Motif.
     // this.setDefaultCapable(false);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

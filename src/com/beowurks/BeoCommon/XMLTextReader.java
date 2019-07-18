@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -27,20 +27,20 @@ import java.util.Date;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class XMLTextReader
 {
   private Document foDoc = null;
   private Node foRootNode = null;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public XMLTextReader()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // By the way, this initializes a document with a String, NOT a file name.
   public boolean initializeXMLDocument(final String tcXMLString)
   {
@@ -64,7 +64,7 @@ public class XMLTextReader
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean initializeXMLDocument(final File toFile)
   {
     boolean llOkay = true;
@@ -88,19 +88,19 @@ public class XMLTextReader
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node getRootNode()
   {
     return (this.foRootNode);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Document getDocument()
   {
     return (this.foDoc);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Element findFirstElement(final String tcElement)
   {
     final NodeList loList = this.foDoc.getElementsByTagName(tcElement);
@@ -112,7 +112,7 @@ public class XMLTextReader
     return ((Element) loList.item(0));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getString(final String tcElement, final String tcDefault)
   {
     final Node loNode = this.findFirstElement(tcElement);
@@ -126,7 +126,7 @@ public class XMLTextReader
     return ((loFirstChild == null) ? tcDefault : loFirstChild.getNodeValue());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean getBoolean(final String tcElement, final boolean tlDefault)
   {
     final String lcValue = this.getString(tcElement, "");
@@ -144,7 +144,7 @@ public class XMLTextReader
     return (llValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getInteger(final String tcElement, final int tnDefault)
   {
     final String lcValue = this.getString(tcElement, "");
@@ -162,7 +162,7 @@ public class XMLTextReader
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public long getLong(final String tcElement, final long tnDefault)
   {
     final String lcValue = this.getString(tcElement, "");
@@ -180,7 +180,7 @@ public class XMLTextReader
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public double getDouble(final String tcElement, final double tnDefault)
   {
     final String lcValue = this.getString(tcElement, "");
@@ -199,7 +199,7 @@ public class XMLTextReader
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Date getDate(final String tcElement, final long tnDefault)
   {
     final String lcValue = this.getString(tcElement, "");
@@ -217,7 +217,7 @@ public class XMLTextReader
     return (new Date(lnValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getAttributeString(final Element toElement, final String tcAttribute, final String tcDefault)
   {
     final String lcValue = toElement.getAttribute(tcAttribute);
@@ -229,7 +229,7 @@ public class XMLTextReader
     return (lcValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getAttributeInteger(final Element toElement, final String tcAttribute, final int tnDefault)
   {
     final String lcValue = this.getAttributeString(toElement, tcAttribute, "");
@@ -247,7 +247,7 @@ public class XMLTextReader
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public long getAttributeLong(final Element toElement, final String tcAttribute, final long tnDefault)
   {
     final String lcValue = this.getAttributeString(toElement, tcAttribute, "");
@@ -265,7 +265,7 @@ public class XMLTextReader
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public double getAttributeDouble(final Element toElement, final String tcAttribute, final double tnDefault)
   {
     final String lcValue = this.getAttributeString(toElement, tcAttribute, "");
@@ -283,7 +283,7 @@ public class XMLTextReader
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Date getAttributeDate(final Element toElement, final String tcAttribute, final long tnDefault)
   {
     final String lcValue = this.getAttributeString(toElement, tcAttribute, "");
@@ -300,8 +300,8 @@ public class XMLTextReader
 
     return (new Date(lnValue));
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

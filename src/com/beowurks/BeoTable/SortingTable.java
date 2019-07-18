@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -64,9 +64,9 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class SortingTable extends JTable implements MouseListener, MouseMotionListener, KeyListener, ActionListener
 {
   public static final int COLUMN_ORDER = 0;
@@ -103,7 +103,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SortingTable()
   {
     super(new SortingTableModel());
@@ -111,7 +111,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     this.commonInitiator();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SortingTable(final SortingTableModel toSortingTableModel)
   {
     super(toSortingTableModel);
@@ -119,7 +119,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     this.commonInitiator();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void commonInitiator()
   {
     this.pnlIS_Panel = new JPanel(new BorderLayout());
@@ -155,13 +155,13 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     this.getTableHeader().setCursor(new Cursor(Cursor.HAND_CURSOR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SortButtonRenderer getSortButtonRenderer()
   {
     return (this.foSortButtonRenderer);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public SortingTableModel getSortModel()
   {
     final TableModel loModel = this.getModel();
@@ -174,7 +174,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     return (null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setupHeaderRenderer()
   {
     final TableColumnModel loModel = this.getColumnModel();
@@ -186,7 +186,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setupColumns(final Object[][] taObjects)
   {
     final SortingTableModel loTableModel = this.getSortModel();
@@ -217,7 +217,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setupColumnWidthsThenPositions(final int[][] taColumnProps)
   {
     if (taColumnProps == null)
@@ -266,7 +266,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void sortColumn(final int tnColumnIndexToModel, final boolean tlToggleState, final boolean tlAscending)
   {
     // Sometimes this routine is set through the program and not by a mouse
@@ -309,7 +309,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void autoFitAllColumns()
   {
     // The majority of the sizing code came from
@@ -323,7 +323,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void autoFitColumn(final int tnColumn)
   {
     final int lnRows = this.getRowCount();
@@ -376,7 +376,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     loColumn.setPreferredWidth(lnMaxWidth + lnMaxBorder);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private int getColumnHeaderSize(final int tnColumn)
   {
     int lnWidth = 0;
@@ -441,10 +441,10 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     return (lnWidth);
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface MouseListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseClicked(final MouseEvent toEvent)
   {
@@ -488,7 +488,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mousePressed(final MouseEvent toEvent)
   {
@@ -517,7 +517,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseReleased(final MouseEvent toEvent)
   {
@@ -556,22 +556,22 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseEntered(final MouseEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseExited(final MouseEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface MouseMotionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseDragged(final MouseEvent toEvent)
   {
@@ -608,22 +608,22 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseMoved(final MouseEvent e)
   {
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface KeyListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void keyPressed(final KeyEvent toEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void keyReleased(final KeyEvent toEvent)
   {
@@ -648,7 +648,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void keyTyped(final KeyEvent toEvent)
   {
@@ -725,10 +725,10 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void actionPerformed(final ActionEvent toEvent)
   {
@@ -738,13 +738,13 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
       EventQueue.invokeLater(new DisplayISMessage(this, null));
     }
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 // Since the routines for resetting and displaying the incremental search
 // string can be called from keyboard, mouse and timer events, I didn't want
 // any collisions. So these routines are thrown to the Event Queue: this way,
@@ -757,14 +757,14 @@ class DisplayISMessage implements Runnable
   final private SortingTable foSortingTable;
   final private String fcISMessage;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public DisplayISMessage(final SortingTable toTable, final String tcISMessage)
   {
     this.foSortingTable = toTable;
     this.fcISMessage = tcISMessage;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void run()
   {
@@ -778,7 +778,7 @@ class DisplayISMessage implements Runnable
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void displayIncrementalSearchText(final String tcISDisplayText)
   {
     this.foSortingTable.tmrIS_Reset.stop();
@@ -815,7 +815,7 @@ class DisplayISMessage implements Runnable
     this.foSortingTable.tmrIS_Reset.start();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void resetIncrementalSearch()
   {
     this.displayIncrementalSearchText(null);
@@ -823,8 +823,8 @@ class DisplayISMessage implements Runnable
     Util.clearStringBuilder(this.foSortingTable.fcIS_String);
     this.foSortingTable.fnIS_CurrentSearchRow = 0;
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

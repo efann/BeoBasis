@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -24,9 +24,9 @@ import java.util.Hashtable;
 import java.util.Vector;
 import java.util.regex.Pattern;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BuildFileList implements Comparator<FileIndex>
 {
   private final Vector<FileIndex> foFileListing = new Vector<>();
@@ -42,7 +42,7 @@ public class BuildFileList implements Comparator<FileIndex>
 
   private Pattern foPattern;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BuildFileList(final SwingProgressComponents toSwingProgressComponents, final boolean tlRecurse,
                        final boolean tlIncludeHiddenDirectories, final boolean tlIncludeHiddenFiles)
   {
@@ -58,19 +58,19 @@ public class BuildFileList implements Comparator<FileIndex>
     this.foSwingProgressComponents.updateOperationBar(0);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static private boolean isAllFilesMask(final String tcFileMask)
   {
     return ((tcFileMask.compareTo("*.*") == 0) || (tcFileMask.compareTo("*") == 0));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Vector<FileIndex> getFileList()
   {
     return (this.foFileListing);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private boolean isRootFile(final File toFile)
   {
     boolean llRoot = false;
@@ -87,7 +87,7 @@ public class BuildFileList implements Comparator<FileIndex>
     return (llRoot);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void loadFiles(final File[] taFiles)
   {
     this.foTempNames.clear();
@@ -132,7 +132,7 @@ public class BuildFileList implements Comparator<FileIndex>
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void loadFiles(final String[] taStartDirectories)
   {
     this.foFileListing.clear();
@@ -161,7 +161,7 @@ public class BuildFileList implements Comparator<FileIndex>
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void searchDirectoryWithMask(final File toStartDirectory)
   {
     if (this.foSwingProgressComponents.isCanceled())
@@ -219,7 +219,7 @@ public class BuildFileList implements Comparator<FileIndex>
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void searchDirectory(final File toStartDirectory)
   {
     if (this.foSwingProgressComponents.isCanceled())
@@ -272,7 +272,7 @@ public class BuildFileList implements Comparator<FileIndex>
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This section of code is from GlobFilter.setPattern located
   // in javax/swing/plaf/basic/BasicFileChooserUI.java.
   // I've modified it to fit within my coding style.
@@ -398,7 +398,7 @@ public class BuildFileList implements Comparator<FileIndex>
     this.foPattern = Pattern.compile(new String(laRevisedPattern, 0, j), Pattern.CASE_INSENSITIVE);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean accept(final File toFile)
   {
     if (toFile == null)
@@ -414,10 +414,10 @@ public class BuildFileList implements Comparator<FileIndex>
     return (this.foPattern.matcher(toFile.getName()).matches());
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface Comparator
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I use this routine to ensure that the directories and their sub-directories
   // are grouped together.
   @Override
@@ -453,7 +453,7 @@ public class BuildFileList implements Comparator<FileIndex>
 
     return (lnResults);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I've decided not to override the equals routine.
   // From the help documentation:
   // Note that it is always safe NOT to override Object.equals(Object). However,
@@ -464,9 +464,9 @@ public class BuildFileList implements Comparator<FileIndex>
   // For example,
   //
   // return ((obj == this) || (obj instanceof BuildFileList));
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

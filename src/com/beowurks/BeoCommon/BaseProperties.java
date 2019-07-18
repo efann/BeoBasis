@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -33,9 +33,9 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BaseProperties
 {
   // From http://stackoverflow.com/questions/25087094/java-cipher-update-method
@@ -61,34 +61,34 @@ public class BaseProperties
 
   private boolean flDisplayErrors = false;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseProperties(final String tcDirectory, final String tcFileName, final String tcHeader)
   {
     this.initialize(tcDirectory, tcFileName, tcHeader, null, true, false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Encrypted properties file.
   public BaseProperties(final String tcDirectory, final String tcFileName, final String tcHeader, final String tcKey)
   {
     this.initialize(tcDirectory, tcFileName, tcHeader, tcKey, true, false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Encrypted properties file.
   public BaseProperties(final String tcDirectory, final String tcFileName, final String tcHeader, final String tcKey, final boolean tlReadProperties)
   {
     this.initialize(tcDirectory, tcFileName, tcHeader, tcKey, tlReadProperties, false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Encrypted properties file.
   public BaseProperties(final String tcDirectory, final String tcFileName, final String tcHeader, final String tcKey, final boolean tlReadProperties, final boolean tlDisplayErrors)
   {
     this.initialize(tcDirectory, tcFileName, tcHeader, tcKey, tlReadProperties, tlDisplayErrors);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // All options.
   private void initialize(final String tcDirectory, final String tcFileName, final String tcHeader, final String tcKey, final boolean tlReadProperties, final boolean tlDisplayErrors)
   {
@@ -114,7 +114,7 @@ public class BaseProperties
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean copyToFile(final String tcDirectory, final String tcFileName)
   {
     boolean llOkay = true;
@@ -135,7 +135,7 @@ public class BaseProperties
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean createLock()
   {
     boolean llOkay = true;
@@ -160,7 +160,7 @@ public class BaseProperties
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean releaseLock()
   {
     boolean llOkay = true;
@@ -193,19 +193,19 @@ public class BaseProperties
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setKey(final String tcKey)
   {
     this.fcKey = tcKey;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean fileExists()
   {
     return ((new File(this.fcFullName)).exists());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean readProperties()
   {
     byte[] lbInput = null;
@@ -263,7 +263,7 @@ public class BaseProperties
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean writeProperties()
   {
     boolean llOkay = true;
@@ -318,7 +318,7 @@ public class BaseProperties
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean deleteFile()
   {
     final File loFile = new File(this.fcFullName);
@@ -326,25 +326,25 @@ public class BaseProperties
     return (loFile.delete());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getDirectory()
   {
     return (this.fcDirectory);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getFileName()
   {
     return (this.fcFileName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getFullName()
   {
     return (this.fcFullName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean getProperty(final String tcKey, final boolean tlDefault)
   {
     final String lcValue = this.foProperties.getProperty(tcKey);
@@ -356,7 +356,7 @@ public class BaseProperties
     return (Boolean.valueOf(lcValue).booleanValue());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public double getProperty(final String tcKey, final double tnDefault)
   {
     double lnValue = tnDefault;
@@ -377,13 +377,13 @@ public class BaseProperties
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Color getProperty(final String tcKey, final Color toDefault)
   {
     return (new Color(this.getProperty(tcKey, toDefault.getRGB())));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getProperty(final String tcKey, final int tnDefault)
   {
     int lnValue = tnDefault;
@@ -404,7 +404,7 @@ public class BaseProperties
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public java.util.Date getProperty(final String tcKey, final java.util.Date tdDefault)
   {
     java.util.Date ldValue = tdDefault;
@@ -425,7 +425,7 @@ public class BaseProperties
     return (ldValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public long getProperty(final String tcKey, final long tnDefault)
   {
     long lnValue = tnDefault;
@@ -446,7 +446,7 @@ public class BaseProperties
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getProperty(final String tcKey, final String tcDefault)
   {
     final String lcValue = this.foProperties.getProperty(tcKey);
@@ -458,50 +458,50 @@ public class BaseProperties
     return (lcValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final boolean tlValue)
   {
     this.foProperties.put(tcKey, Boolean.toString(tlValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final double tnValue)
   {
     this.foProperties.put(tcKey, Double.toString(tnValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final Color toValue)
   {
     this.setProperty(tcKey, toValue.getRGB());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final int tnValue)
   {
     this.foProperties.put(tcKey, Integer.toString(tnValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final java.util.Date tdValue)
   {
     this.foProperties.put(tcKey, this.foDateFormat.format(tdValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final long tnValue)
   {
     this.foProperties.put(tcKey, Long.toString(tnValue));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setProperty(final String tcKey, final String tcValue)
   {
     this.foProperties.put(tcKey, tcValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

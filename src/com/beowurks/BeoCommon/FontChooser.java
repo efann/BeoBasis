@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -37,9 +37,9 @@ import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class FontChooser implements ChangeListener, ListSelectionListener, ItemListener
 {
   private final Window foWindow;
@@ -59,7 +59,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
 
   private int fnMaxSpinner = 100;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FontChooser(final Window toWindow, final Font toFont)
   {
 
@@ -76,7 +76,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FontChooser(final Window toWindow, final Font toFont, final int tnMaxSpinner)
   {
 
@@ -94,7 +94,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void jbInit() throws Exception
   {
     this.setupScrollPanels();
@@ -111,7 +111,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.resetPreviewText();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String getFontName()
   {
     // If, for some reason, nothing has been selected, then just return
@@ -124,7 +124,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     return (this.lstFontNames1.getSelectedValue().toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getFontSize()
   {
     final Object loValue = this.spnFontSize1.getValue();
@@ -143,7 +143,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     return (lnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getFontStyle()
   {
     int lnStyle = Font.PLAIN;
@@ -161,7 +161,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     return (lnStyle);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupCheckBoxes()
   {
     this.chkBold1.setText("Bold");
@@ -174,7 +174,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.chkItalic1.setCursor(new Cursor(Cursor.HAND_CURSOR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLayouts()
   {
     this.scrFontNames1.getViewport().add(this.lstFontNames1, null);
@@ -194,7 +194,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
             loGrid.getConstraint(0, 4, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.chkBold1.addItemListener(this);
@@ -204,7 +204,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.lstFontNames1.addListSelectionListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupScrollPanels()
   {
     final Dimension ldScreenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -215,7 +215,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.scrFontNames1.setMinimumSize(ldSize);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupSpinners()
   {
     this.spnFontSize1 = new JSpinner(new SpinnerNumberModel(this.foFont.getSize(), 1, this.fnMaxSpinner, 1));
@@ -225,7 +225,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.spnFontSize1.setPreferredSize(ldSize);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupTextBoxes()
   {
     final Dimension ldScreenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -237,7 +237,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.txtPreview1.setEditable(false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void resetPreviewText()
   {
     // You know, you could use deriveFont. But it also creates a new Font. So,
@@ -245,7 +245,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.txtPreview1.setFont(new Font(this.getFontName(), this.getFontStyle(), this.getFontSize()));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean showDialog()
   {
     final int lnResults = JOptionPane.showConfirmDialog(this.foWindow, new Object[]{this.pnlComponents},
@@ -254,37 +254,37 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     return (lnResults == JOptionPane.OK_OPTION);
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ItemListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void itemStateChanged(final ItemEvent e)
   {
     this.resetPreviewText();
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ChangeListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void stateChanged(final ChangeEvent e)
   {
     this.resetPreviewText();
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ListSelectionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void valueChanged(final ListSelectionEvent e)
   {
     this.resetPreviewText();
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

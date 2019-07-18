@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -48,9 +48,9 @@ import javax.swing.table.TableColumnModel;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class DialogAbout extends BaseDialog implements ActionListener, MouseListener
 {
   private final static int PADDING = 8;
@@ -74,7 +74,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
   
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public DialogAbout(final JFrame toFrame, final IAbout toAbout)
   {
     super(toFrame, "About");
@@ -92,7 +92,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void jbInit() throws Exception
   {
@@ -112,7 +112,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     Util.addEscapeListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLayouts()
   {
     final GridBagLayoutHelper loHelperNoInset = new GridBagLayoutHelper();
@@ -140,7 +140,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupScrollPanes()
   {
     this.scrSystemInfo1.setPreferredSize(this.foStandardGridDimension);
@@ -165,7 +165,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupGrids()
   {
     // -------------------------------
@@ -178,7 +178,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     this.grdSystemInfo1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupButtons()
   {
     this.btnClose1.setText("Close");
@@ -188,7 +188,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     this.btnClose1.setIcon(new ImageIcon(this.getClass().getResource("/com/beowurks/BeoCommon/images/exit22.png")));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // JEditorPane, not JLabel, has an addHyperlinkListener.
   // Also, since one can block and copy a JEditorPane, but not a JLabel,
   // I'm making all text JEditorPanes.
@@ -206,7 +206,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     this.initTextBox(this.txtCopyright1, "<div class='copyright'>Copyright&#169; " + lcCopyrightYears + ", <a href='" + this.foAbout.getCopyrightCompanyURL() + "'>" + this.foAbout.getCopyrightCompany() + "</a>. All rights reserved.</div>");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void initTextBox(final JEditorPane toEditorPane, final String tcText)
   {
     final Color loRGB = this.getBackground();
@@ -228,21 +228,21 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     toEditorPane.setText(tcText);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLabels()
   {
     this.lblLogo1.setIcon(new ImageIcon(this.foAbout.getLogo()));
     this.lblLogo1.setCursor(new Cursor(Cursor.HAND_CURSOR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.btnClose1.addActionListener(this);
     this.lblLogo1.addMouseListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupGridDataAndSetColumnWidths()
   {
     // -------------------------------
@@ -287,7 +287,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void removeListeners()
   {
@@ -295,10 +295,10 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     this.lblLogo1.removeMouseListener(this);
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void actionPerformed(final ActionEvent e)
   {
@@ -308,10 +308,10 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface MouseListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseClicked(final MouseEvent toMouseEvent)
   {
@@ -322,32 +322,32 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mousePressed(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseReleased(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseEntered(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseExited(final MouseEvent toMouseEvent)
   {
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

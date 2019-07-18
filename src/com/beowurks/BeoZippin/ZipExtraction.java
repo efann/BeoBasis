@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -28,9 +28,9 @@ import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ZipExtraction
 {
   private static final int DATA_BUFFER = 2048;
@@ -51,7 +51,7 @@ public class ZipExtraction
 
   private final DecimalFormat foByteDecimalFormat = new DecimalFormat("#,###");
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ZipExtraction(final String tcArchiveName, final ZipTable toZipTable, final String tcStartDirectory,
                        final boolean tlUsePath, final boolean tlOverwriteExisting, final BaseFrame toFrame,
                        final SwingProgressComponents toSwingProgressComponents)
@@ -67,7 +67,7 @@ public class ZipExtraction
     this.foSwingProgressComponents.updateDescription("Extracting from archive file, " + this.fcArchiveName + ". . . .");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void extractFiles() throws Exception
   {
     if (!ZipExtraction.makeDirectory(this.fcStartDirectory))
@@ -105,7 +105,7 @@ public class ZipExtraction
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void extractSelected() throws Exception
   {
     Exception loError = null;
@@ -237,7 +237,7 @@ public class ZipExtraction
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void extractAll() throws Exception
   {
     Exception loError = null;
@@ -360,7 +360,7 @@ public class ZipExtraction
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private boolean overwriteFileQuery(final ZipEntry toEntry, final String tcFileName)
   {
     final File loFile = new File(tcFileName);
@@ -412,7 +412,7 @@ public class ZipExtraction
     return (true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void createPath(final ZipEntry toEntry) throws Exception
   {
     String lcExtract = Util.extractDirectory(toEntry.getName(), "/");
@@ -428,7 +428,7 @@ public class ZipExtraction
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static private boolean makeDirectory(final String tcDirectory)
   {
     final File loFile = new File(tcDirectory);
@@ -446,7 +446,7 @@ public class ZipExtraction
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void cancelDialog()
   {
     this.foSwingProgressComponents.getCancelDialog().closeCancelDialog();
@@ -461,8 +461,8 @@ public class ZipExtraction
       }
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

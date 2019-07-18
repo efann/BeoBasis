@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -29,9 +29,9 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ZipCompilation
 {
   private static final int DATA_BUFFER = 2048;
@@ -50,7 +50,7 @@ public class ZipCompilation
 
   private final String fcComment;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // By the way, the Vector toFileListing can consists of different types of
   // Objects.
   // For instance, for zipping files, it consists of a list of FileIndex,
@@ -97,7 +97,7 @@ public class ZipCompilation
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void zipFiles() throws Exception
   {
     if (this.fcArchiveTempFileName.isEmpty())
@@ -221,7 +221,7 @@ public class ZipCompilation
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Realize that with zip files, when adding or deleting entries, you can't
   // just
   // open the existing file and delete/append entries. To add, you have to
@@ -384,7 +384,7 @@ public class ZipCompilation
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Remember: with zip files, when adding or deleting entries, you can't just
   // open the existing file and delete/append entries. To add, you have to
   // create
@@ -528,7 +528,7 @@ public class ZipCompilation
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private static Exception addEntry(final ZipOutputStream toZipOutputTempStream, final ZipEntry toEntry)
   {
     Exception loException = null;
@@ -545,13 +545,13 @@ public class ZipCompilation
     return (loException);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private static boolean isDuplicateError(final Exception toError)
   {
     return ((toError instanceof ZipException) && (toError.getMessage().toLowerCase().contains("duplicate")));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Strip the root folder from the file name.
   private String stripRootFolderFromFileName(final String tcFileName)
   {
@@ -564,7 +564,7 @@ public class ZipCompilation
     return (lcConvertName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Change all of the file separators in the file name to '/'.
   private static String convertNameToZipStandard(final String tcFileName)
   {
@@ -584,7 +584,7 @@ public class ZipCompilation
     return (lcTruncated);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void fileSave() throws Exception
   {
     // I only check here if the cancel dialog has been, uh, canceled. Once
@@ -661,8 +661,8 @@ public class ZipCompilation
       throw (loError);
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

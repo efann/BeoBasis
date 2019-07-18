@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -36,9 +36,9 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class XMLTextWriter
 {
   private Document foDoc = null;
@@ -46,49 +46,49 @@ public class XMLTextWriter
 
   private boolean flDeleteOnExit = false;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public XMLTextWriter()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public XMLTextWriter(final boolean tlDeleteOnExit)
   {
 
     this.flDeleteOnExit = tlDeleteOnExit;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final boolean tlValue, final Object taAttributes[][])
   {
     return (this.appendNodeToRoot(tcElement, Boolean.toString(tlValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final Date tdValue, final Object taAttributes[][])
   {
     return (this.appendNodeToRoot(tcElement, tdValue.getTime(), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final double tnValue, final Object taAttributes[][])
   {
     return (this.appendNodeToRoot(tcElement, Double.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final int tnValue, final Object taAttributes[][])
   {
     return (this.appendNodeToRoot(tcElement, Integer.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final long tnValue, final Object taAttributes[][])
   {
     return (this.appendNodeToRoot(tcElement, Long.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendNodeToRoot(final String tcElement, final String tcValue, final Object taAttributes[][])
   {
     Node loNode = null;
@@ -129,26 +129,26 @@ public class XMLTextWriter
     return (loNode);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendToNode(final Node toNode, final String tcElement, final double tnValue,
                            final Object taAttributes[][])
   {
     return (this.appendToNode(toNode, tcElement, Double.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendToNode(final Node toNode, final String tcElement, final int tnValue, final Object taAttributes[][])
   {
     return (this.appendToNode(toNode, tcElement, Integer.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendToNode(final Node toNode, final String tcElement, final long tnValue, final Object taAttributes[][])
   {
     return (this.appendToNode(toNode, tcElement, Long.toString(tnValue), taAttributes));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node appendToNode(final Node toNode, final String tcElement, final String tcValue,
                            final Object taAttributes[][])
   {
@@ -190,7 +190,7 @@ public class XMLTextWriter
     return (loNode);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Node createRootNode(final String tcRootName, final Object taAttributes[][])
   {
     try
@@ -224,7 +224,7 @@ public class XMLTextWriter
     return (this.foRoot);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public String generateXMLString(final int tnIndent)
   {
     final StringWriter loStringWriter = new StringWriter();
@@ -277,13 +277,13 @@ public class XMLTextWriter
     return (loStringWriter.toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean getDeleteOnExit()
   {
     return (this.flDeleteOnExit);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public Document initializeXMLDocument()
   {
     try
@@ -300,7 +300,7 @@ public class XMLTextWriter
     return (this.foDoc);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public boolean saveToFile(final String tcFileName, final int tnIndent)
   {
     boolean llOkay = true;
@@ -371,13 +371,13 @@ public class XMLTextWriter
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setDeleteOnExit(final boolean tlDeleteOnExit)
   {
     this.flDeleteOnExit = tlDeleteOnExit;
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

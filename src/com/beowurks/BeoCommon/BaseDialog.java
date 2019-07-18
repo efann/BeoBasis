@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -26,9 +26,9 @@ import javax.swing.JRootPane;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 abstract public class BaseDialog extends JDialog
 {
 
@@ -36,7 +36,7 @@ abstract public class BaseDialog extends JDialog
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseDialog(final JFrame toFrame, final String tcTitle)
   {
     this(toFrame, tcTitle, true);
@@ -44,7 +44,7 @@ abstract public class BaseDialog extends JDialog
     this.setCallingWindowCursor(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseDialog(final JFrame toFrame, final String tcTitle, final boolean tlModal)
   {
     super(toFrame, tcTitle, tlModal);
@@ -52,7 +52,7 @@ abstract public class BaseDialog extends JDialog
     this.setCallingWindowCursor(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void jbInit() throws Exception
   {
     this.enableEvents(AWTEvent.WINDOW_EVENT_MASK);
@@ -69,7 +69,7 @@ abstract public class BaseDialog extends JDialog
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void centerDialog()
   {
     this.pack();
@@ -77,7 +77,7 @@ abstract public class BaseDialog extends JDialog
     this.setLocationRelativeTo(this.getOwner());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got the following code from
   // http://java.sun.com/developer/JDCTechTips/2003/tt1208.html#1
   public void makeVisible(final boolean tlCenter)
@@ -128,7 +128,7 @@ abstract public class BaseDialog extends JDialog
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void setCallingWindowCursor(final boolean tlBusy)
   {
     final Window loWindow = this.getOwner();
@@ -145,13 +145,13 @@ abstract public class BaseDialog extends JDialog
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy)
   {
     this.setBusy(tlBusy, true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setBusy(final boolean tlBusy, final boolean tlIncludeFocusRoutines)
   {
     if (tlBusy)
@@ -164,7 +164,7 @@ abstract public class BaseDialog extends JDialog
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I created this because there isn't a programmatic closing method for a
   // JDialog.
   public void closeWindow()
@@ -172,7 +172,7 @@ abstract public class BaseDialog extends JDialog
     Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Overridden so we can exit when window is closed
   @Override
   protected void processWindowEvent(final WindowEvent e)
@@ -194,7 +194,7 @@ abstract public class BaseDialog extends JDialog
     super.processWindowEvent(e);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I created this because there isn't a good reliable destructor procedure in
   // Java.
   public final void cleanUp()
@@ -204,22 +204,22 @@ abstract public class BaseDialog extends JDialog
     this.releasePointers();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void finalOperations()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void removeListeners()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void releasePointers()
   {
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

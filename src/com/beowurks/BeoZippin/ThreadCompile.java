@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -25,9 +25,9 @@ import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ThreadCompile extends Thread
 {
   private final BaseFrame foFrame;
@@ -55,7 +55,7 @@ public class ThreadCompile extends Thread
   private Method fmFinishCallbackMethod = null;
   private Object[] faFinishParameters = null;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ThreadCompile(final BaseFrame toFrame, final IZipProgressComponents toZipProgressComponents,
                        final File toArchiveFile, final boolean tlIncludeHiddenDirectories, final boolean tlIncludeHiddenFiles,
                        final int tnCompressionLevel, final String[] taFolders, final String tcComment,
@@ -90,7 +90,7 @@ public class ThreadCompile extends Thread
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ThreadCompile(final BaseFrame toFrame, final IZipProgressComponents toZipProgressComponents,
                        final File toArchiveFile, final boolean tlRecurse, final boolean tlIncludeHiddenDirectories,
                        final boolean tlIncludeHiddenFiles, final boolean tlSaveFolderInformation, final int tnCompressionLevel,
@@ -156,7 +156,7 @@ public class ThreadCompile extends Thread
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void run()
   {
@@ -234,7 +234,7 @@ public class ThreadCompile extends Thread
     this.finishRoutine();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void buildList()
   {
     this.foBuildFileList = new BuildFileList(this.foSwingProgressComponents, this.flRecurse,
@@ -250,7 +250,7 @@ public class ThreadCompile extends Thread
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void finishRoutine()
   {
     // It doesn't matter if faParameters is null.
@@ -276,8 +276,8 @@ public class ThreadCompile extends Thread
 
     });
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

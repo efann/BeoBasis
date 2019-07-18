@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -22,9 +22,9 @@ import javax.swing.SwingConstants;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BaseFormattedNumberField extends BaseFormattedField
 {
   protected NumberFormat foNumberFormat = null;
@@ -33,43 +33,43 @@ public class BaseFormattedNumberField extends BaseFormattedField
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField(final Object toValue)
   {
     super(toValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField(final Format toFormat)
   {
     super(toFormat);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField(final JFormattedTextField.AbstractFormatter toFormatter)
   {
     super(toFormatter);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField(final JFormattedTextField.AbstractFormatterFactory toFactory)
   {
     super(toFactory);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseFormattedNumberField(final JFormattedTextField.AbstractFormatterFactory toFactory,
                                   final Object toCurrentValue)
   {
     super(toFactory, toCurrentValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void setupFormattedField() throws Exception
   {
@@ -93,7 +93,7 @@ public class BaseFormattedNumberField extends BaseFormattedField
     this.setHorizontalAlignment(SwingConstants.RIGHT);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setMinimumFractionDigits(final int tnNewValue)
   {
     if (this.foNumberFormat == null)
@@ -110,7 +110,7 @@ public class BaseFormattedNumberField extends BaseFormattedField
     this.foNumberFormat.setMinimumFractionDigits(tnNewValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setMaximumFractionDigits(final int tnNewValue)
   {
     if (this.foNumberFormat == null)
@@ -126,7 +126,7 @@ public class BaseFormattedNumberField extends BaseFormattedField
     this.foNumberFormat.setMaximumFractionDigits(tnNewValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setMinimumIntegerDigits(final int tnNewValue)
   {
     if (this.foNumberFormat == null)
@@ -137,7 +137,7 @@ public class BaseFormattedNumberField extends BaseFormattedField
     this.foNumberFormat.setMinimumIntegerDigits(tnNewValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setMaximumIntegerDigits(final int tnNewValue)
   {
     if (this.foNumberFormat == null)
@@ -148,28 +148,28 @@ public class BaseFormattedNumberField extends BaseFormattedField
     this.foNumberFormat.setMaximumIntegerDigits(tnNewValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public int getIntegerValue()
   {
     final Object loValue = this.getValue();
     return ((loValue instanceof Number) ? ((Number) loValue).intValue() : 0);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public long getLongValue()
   {
     final Object loValue = this.getValue();
     return ((loValue instanceof Number) ? ((Number) loValue).longValue() : 0);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public double getDoubleValue()
   {
     final Object loValue = this.getValue();
     return ((loValue instanceof Number) ? ((Number) loValue).doubleValue() : 0);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

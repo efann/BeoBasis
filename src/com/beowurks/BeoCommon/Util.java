@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -74,9 +74,9 @@ import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import javax.swing.plaf.FontUIResource;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public final class Util
 {
   static public final String CONTACTS_SEPARATOR = ";;";
@@ -122,12 +122,12 @@ public final class Util
   static private final StringBuilder fcWrapWord = new StringBuilder(256);
   static private int fnWrapWordLength;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private Util()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public byte[] binaryFileToBytes(final String tcFileName)
   {
     ByteArrayOutputStream loByteArrayOutputStream = null;
@@ -161,7 +161,7 @@ public final class Util
     return (loByteArrayOutputStream != null ? loByteArrayOutputStream.toByteArray() : null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String buildTitleFromManifest(final java.lang.Object toObject)
   {
     final StringBuilder lcTitle = new StringBuilder(60);
@@ -197,7 +197,7 @@ public final class Util
     return ((lcTitle.length() > 0) ? lcTitle.toString() : "<empty>");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Recursively adds to a StringBuilder. I got the basis for this code from
   // BasicOptionPaneUI.burstStringInto.
   // By the way, this is primitive line wrapping.
@@ -241,7 +241,7 @@ public final class Util
     Util.fcWrapWord.append("\n");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void bytesToBinaryFile(final byte[] taBytes, final String tcFileName)
   {
     try
@@ -256,7 +256,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void cascadeWindows()
   {
     final Frame[] laFrames = Frame.getFrames();
@@ -296,7 +296,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void cascadeWindows(final JDesktopPane toDesktopPane)
   {
     SwingUtilities.invokeLater(new Runnable()
@@ -391,7 +391,7 @@ public final class Util
     });
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private static Dialog checkForModal(final Window toWindow)
   {
     final Window[] loChildren = toWindow.getOwnedWindows();
@@ -417,7 +417,7 @@ public final class Util
     return (loDialog);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Yeah, I know: it should be 0, lnLength-1. But according to the help,
   // Parameters:
   // start - The beginning index, inclusive.
@@ -433,7 +433,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void closeAllWindows()
   {
     final Frame[] laFrames = Frame.getFrames();
@@ -482,7 +482,7 @@ public final class Util
     loMainFrame.makeVisible(true);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void closeAllWindows(final JDesktopPane toDesktopPane)
   {
     final JInternalFrame[] laFrames = toDesktopPane.getAllFrames();
@@ -499,7 +499,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String displayTimeDifference(final Date toBegin, final Date toEnd, final int tnDecimalPlaces)
   {
     final double lnMilliseconds = toEnd.getTime() - toBegin.getTime();
@@ -524,7 +524,7 @@ public final class Util
     return (lcString);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean downloadWebFile(final String tcWebFile, final String tcLocalFile)
   {
     boolean llOkay = true;
@@ -621,7 +621,7 @@ public final class Util
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public static void showStackTraceInMessage(final Component toParent, final Exception toException,
                                              final String tcTitle)
   {
@@ -659,13 +659,13 @@ public final class Util
     loDialog.dispose();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void errorMessage(final Component toParent, final Object toMessage)
   {
     Util.displayMessage(toParent, toMessage, JOptionPane.ERROR_MESSAGE);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void errorMessageInThread(final Component toParent, final Object toMessage)
   {
     SwingUtilities.invokeLater(new Runnable()
@@ -678,7 +678,7 @@ public final class Util
     });
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean yesNo(final Component toParent, final Object toMessage)
   {
     final String lcTitle = Util.getTitle();
@@ -703,7 +703,7 @@ public final class Util
     return (false);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void displayMessage(final Component toParent, final Object toMessage, final int tnMessageType)
   {
     final String lcTitle = Util.getTitle();
@@ -711,7 +711,7 @@ public final class Util
     Util.displayMessage(toParent, toMessage, lcTitle, tnMessageType);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // The article at http://java.sun.com/developer/JDCTechTips/2004/tt0122.html#1
   // discusses adding Word Wrap. Only works with non-HTML strings.
   // BasicOptionPaneUI.burstStringInto splits the String into multiple
@@ -821,7 +821,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Recursively adds to a StringBuilder. I got this code from
   // BasicOptionPaneUI.burstStringInto.
   static public String wrapWords(final String tcString, final int tnWrapWordLength)
@@ -837,14 +837,14 @@ public final class Util
     return (Util.fcWrapWord.toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the directory of a file.
   static public String extractDirectory(final String tcFileName)
   {
     return (Util.extractDirectory(tcFileName, Util.FILE_SEPARATOR_CHAR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the directory of a file.
   static public String extractDirectory(final String tcFileName, final String tcFileSeparatorChar)
   {
@@ -859,14 +859,14 @@ public final class Util
     return (null);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the extension of a file.
   static public String extractFileExtension(final File toFile)
   {
     return (Util.extractFileExtension(toFile.getName()));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the extension of a file.
   static public String extractFileExtension(final String tcFileName)
   {
@@ -883,14 +883,14 @@ public final class Util
     return (lcExt);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the file name from a path.
   static public String extractFileName(final String tcFileName)
   {
     return (Util.extractFileName(tcFileName, Util.FILE_SEPARATOR_CHAR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the file name from a path.
   static public String extractFileName(final String tcFileName, final String tcFileSeparatorChar)
   {
@@ -905,14 +905,14 @@ public final class Util
     return (tcFileName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the file name without the extension from a path.
   static public String extractFileStem(final String tcFileName)
   {
     return (Util.extractFileStem(tcFileName, Util.FILE_SEPARATOR_CHAR));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the file name without the extension from a path.
   static public String extractFileStem(final String tcFileName, final String tcFileSeparatorChar)
   {
@@ -929,7 +929,7 @@ public final class Util
     return (lcFileName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean fileCopy(final String tcSource, final String tcDestination)
   {
     FileInputStream loIn = null;
@@ -998,7 +998,7 @@ public final class Util
     return (llOkay);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This only works with text files . . . as the name implies.
   static public String fileTextToString(final String tcFileName)
   {
@@ -1045,7 +1045,7 @@ public final class Util
     return (lcFileString.toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public Component findObjectInTree(final Component toComp, final Class<?> toClass)
   {
     Component loComp = null;
@@ -1072,7 +1072,7 @@ public final class Util
     return (loComp);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public static byte[] getKeyBytes(final String tcKey, final int tnFinalLength)
   {
     final byte[] laResults = new byte[tnFinalLength];
@@ -1101,7 +1101,7 @@ public final class Util
     return (laResults);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This routine returns the background color of a button which I use
   // for readonly grids, textboxes, etc.
   // Turns out that if you use this.getBackground before the frame or
@@ -1119,7 +1119,7 @@ public final class Util
     return (Color.gray);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Get the memory status
   static public String getMemoryStatus()
   {
@@ -1136,7 +1136,7 @@ public final class Util
     return (Util.fcMemoryDisplay.toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String getPackageVersion(final String tcFile)
   {
     final StringBuilder lcFullVersion = new StringBuilder(200);
@@ -1194,7 +1194,7 @@ public final class Util
     return ((lcFullVersion.length() > 0) ? lcFullVersion.toString() : "<empty>");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String getTitle()
   {
     String lcTitle = System.getProperty(Util.TITLE_VALUE);
@@ -1206,7 +1206,7 @@ public final class Util
     return (lcTitle);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public static Dialog getTopModalWindow()
   {
     final Frame[] loFrames = Frame.getFrames();
@@ -1221,7 +1221,7 @@ public final class Util
     return (loDialog);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String includeTrailingBackslash(final String tcFileName)
   {
     final String lcSeparator = File.separator;
@@ -1230,13 +1230,13 @@ public final class Util
     return (lcFileName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void infoMessage(final Component toComponent, final Object toMessage)
   {
     Util.displayMessage(toComponent, toMessage, JOptionPane.INFORMATION_MESSAGE);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void infoMessageInThread(final Component toComponent, final Object toMessage)
   {
     SwingUtilities.invokeLater(new Runnable()
@@ -1249,7 +1249,7 @@ public final class Util
     });
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This function now returns a Container as that is highest order
   // component that JFrame and JInternalFrame have in common.
   static public Container isFrameObject(final Class<?> toClass)
@@ -1286,7 +1286,7 @@ public final class Util
     return (loFoundContainer);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // From
   // http://developer.apple.com/library/mac/#documentation/Java/Conceptual/Java14Development/00-Intro/JavaDevelopment.html
   static public boolean isMacintosh()
@@ -1294,13 +1294,13 @@ public final class Util
     return (Util.OPERATING_SYSTEM.toLowerCase().startsWith("mac"));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean isWindows()
   {
     return (Util.OPERATING_SYSTEM.toLowerCase().contains("windows"));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void launchBrowser(final String tcFile)
   {
     if (Desktop.isDesktopSupported())
@@ -1325,7 +1325,7 @@ public final class Util
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void launchEMail(final String tcAddress)
   {
     try
@@ -1338,7 +1338,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I got this from examining the jnlp file for the Application Manager on
   // Java Web Start Demos.
   static public void launchJavaApplicationManager()
@@ -1366,7 +1366,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void listDefaultSettings()
   {
     final UIDefaults defaults = UIManager.getDefaults();
@@ -1395,7 +1395,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean makeDirectory(final String tcDirectory)
   {
     final File loFile = new File(tcDirectory);
@@ -1413,7 +1413,7 @@ public final class Util
     return (loFile.exists());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public boolean okCancel(final Component toComponent, final Object toMessage)
   {
     final String lcTitle = Util.getTitle();
@@ -1425,13 +1425,13 @@ public final class Util
     return (lnResults == JOptionPane.OK_OPTION);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder padLeft(final String tcString, final int tnNewLength)
   {
     return (Util.padLeft(tcString, tnNewLength, ' '));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder padLeft(final String tcString, final int tnNewLength, final char tcChar)
   {
     Util.clearStringBuilder(Util.fcPadding);
@@ -1458,13 +1458,13 @@ public final class Util
     return (Util.fcPadding);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder padRight(final String tcString, final int tnNewLength)
   {
     return (Util.padRight(tcString, tnNewLength, ' '));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder padRight(final String tcString, final int tnNewLength, final char tcChar)
   {
     Util.clearStringBuilder(Util.fcPadding);
@@ -1487,13 +1487,13 @@ public final class Util
     return (Util.fcPadding);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String readWebFile(final String tcWebFile)
   {
     return (Util.readWebFile(tcWebFile, null, null));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public String readWebFile(final String tcWebFile, final String tcPostData, final String tcContentType)
   {
     boolean llOkay = true;
@@ -1591,7 +1591,7 @@ public final class Util
     return (loContents.toString());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder replaceAll(final String tcString, final String tcSearch, final String tcReplace)
   {
     if (tcSearch.isEmpty())
@@ -1618,7 +1618,7 @@ public final class Util
     return (Util.fcReplace);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void replaceAll(final StringBuilder toString, final String tcSearch, final String tcReplace)
   {
     if (tcSearch.isEmpty())
@@ -1640,7 +1640,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder replaceAllIgnoreCase(final String tcString, final String tcSearch, final String tcReplace)
   {
     if (tcSearch.isEmpty())
@@ -1667,13 +1667,13 @@ public final class Util
     return (Util.fcReplace);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void setTitle(final String tcValue)
   {
     System.setProperty(Util.TITLE_VALUE, tcValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public void setUIManagerAppearances()
   {
     // Don't change any defaults for Macintosh.
@@ -1730,7 +1730,7 @@ public final class Util
     UIManager.put("Label.foreground", Color.black);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This routine sets all of the system fonts to plain rather than bold
   // as well as making Arial the default style.
   private static void setUIManagerFontToPlain(final String tcObjectKey)
@@ -1748,7 +1748,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This only works with text files . . . as the name implies.
   static public void stringToFileText(final String tcExpression, final String tcFileName)
   {
@@ -1773,7 +1773,7 @@ public final class Util
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static public StringBuilder toProperCase(final String tcString)
   {
     Util.clearStringBuilder(Util.fcProperCase);
@@ -1807,7 +1807,7 @@ public final class Util
     return (Util.fcProperCase);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 // From http://stackoverflow.com/questions/642925/swing-how-do-i-close-a-dialog-when-the-esc-key-is-pressed
   public static void addEscapeListener(final JDialog toDialog)
   {
@@ -1824,8 +1824,8 @@ public final class Util
     toDialog.getRootPane().registerKeyboardAction(loActionListener,
             KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
   }
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

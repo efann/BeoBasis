@@ -12,59 +12,66 @@
  * Contributor(s):   -;
  */
 
-package com.beowurks.BeoLookFeel;
+package com.beowurks.BeoDesktop;
 
-import javax.swing.plaf.ColorUIResource;
-import javax.swing.plaf.metal.DefaultMetalTheme;
+import com.beowurks.BeoCommon.Util;
 
-/**
- * This class describes a theme using "blue-green" colors.
- * <p/>
- * 1.9 07/26/04
- *
- * @author Steve Wilson
- *         <p/>
- *         Modified by Eddie Fann, August, 2005
- *         <p/>
- *         From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/AquaTheme.java
- */
+import java.awt.Desktop;
+
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
-public class LFMTAqua extends DefaultMetalTheme
+public class DesktopHelper
 {
-  private static final ColorUIResource PRIMARY1 = new ColorUIResource(102, 153, 153);
-  private static final ColorUIResource PRIMARY2 = new ColorUIResource(128, 192, 192);
-  private static final ColorUIResource PRIMARY3 = new ColorUIResource(159, 235, 235);
-
   // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  public String getName()
+  private DesktopHelper()
   {
-    return ("Aqua");
+
   }
 
   // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary1()
+  // Apparently, running on Windows throws errors for these routines as they are not supported.
+  // But, that's okay, as I just need them to function on Apple or OS X.
+  static public void setupDesktop(final IDesktopAdapter tiDesktopAdapter)
   {
-    return (LFMTAqua.PRIMARY1);
-  }
+    final Desktop loDesktop = Desktop.getDesktop();
 
-  // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary2()
-  {
-    return (LFMTAqua.PRIMARY2);
-  }
+    try
+    {
+      loDesktop.setAboutHandler(teEvent ->
+          tiDesktopAdapter.AboutHandler()
+      );
+    }
+    catch (Exception loError)
+    {
+      Util.errorMessage(null, loError.getMessage());
+    }
 
-  // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary3()
-  {
-    return (LFMTAqua.PRIMARY3);
+    try
+    {
+      loDesktop.setPreferencesHandler(teEvent ->
+          tiDesktopAdapter.PreferencesHandler()
+      );
+    }
+    catch (Exception loError)
+    {
+      Util.errorMessage(null, loError.getMessage());
+    }
+
+    try
+    {
+      loDesktop.setQuitHandler((teEvent, teResponse) ->
+          tiDesktopAdapter.QuitHandler()
+      );
+    }
+    catch (Exception loError)
+    {
+      Util.errorMessage(null, loError.getMessage());
+    }
+
   }
   // ---------------------------------------------------------------------------------------------------------------------
+
 }
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

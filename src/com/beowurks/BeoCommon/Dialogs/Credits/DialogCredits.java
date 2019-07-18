@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -34,9 +34,9 @@ import javax.swing.JScrollPane;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class DialogCredits extends BaseDialog implements ActionListener
 {
   private final BaseButton btnClose1 = new BaseButton(76, 30);
@@ -49,7 +49,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public DialogCredits(final JFrame toFrame, final Vector<ICredit> toVectorLinks)
   {
     super(toFrame, "Credits");
@@ -67,7 +67,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Component initialization
   // By the way, if you call this.setResizable(false), the application
   // icon will not appear in the upper left corner.
@@ -86,7 +86,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
     Util.addEscapeListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupCredits()
   {
     final StringBuilder loHtml = new StringBuilder();
@@ -113,7 +113,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
     this.txtCredits1.setCaretPosition(0);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupButtons()
   {
     this.btnClose1.setText("Close");
@@ -123,7 +123,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
     this.btnClose1.setIcon(new ImageIcon(this.getClass().getResource("/com/beowurks/BeoCommon/images/exit22.png")));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupLayouts()
   {
     // --------------------
@@ -139,7 +139,7 @@ public class DialogCredits extends BaseDialog implements ActionListener
             loGrid.getConstraint(0, 1, GridBagConstraints.EAST, GridBagConstraints.NONE));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupScrollPanes()
   {
     final Dimension ldScreenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -152,13 +152,13 @@ public class DialogCredits extends BaseDialog implements ActionListener
     loPane.setMinimumSize(new Dimension(lnWidth, lnHeight));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.btnClose1.addActionListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void removeListeners()
   {
@@ -167,8 +167,8 @@ public class DialogCredits extends BaseDialog implements ActionListener
     this.btnClose1.removeActionListener(this);
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface ActionListener
   @Override
   public void actionPerformed(final ActionEvent toActionEvent)
@@ -183,9 +183,9 @@ public class DialogCredits extends BaseDialog implements ActionListener
       }
     }
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -31,9 +31,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.Vector;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class BaseEditTable extends JTable
 {
   private final ButtonEnabledRenderer foButtonEnabledRenderer = new ButtonEnabledRenderer();
@@ -42,55 +42,55 @@ public class BaseEditTable extends JTable
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable()
   {
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(final TableModel toDm)
   {
     super(toDm);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(final TableModel toDm, final TableColumnModel toCm)
   {
     super(toDm, toCm);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(final TableModel toDm, final TableColumnModel toCm, final ListSelectionModel toSm)
   {
     super(toDm, toCm, toSm);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(final int tnNumRows, final int tnNumColumns)
   {
     super(tnNumRows, tnNumColumns);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(Vector<? extends Vector> taRowData, Vector<?> taColumnNames)
   {
     super(taRowData, taColumnNames);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public BaseEditTable(final Object[][] toRowData, final Object[] toColumnNames)
   {
     super(toRowData, toColumnNames);
     this.setupInputMap();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setupHeaderRenderer()
   {
     final TableColumnModel loModel = this.getColumnModel();
@@ -102,7 +102,7 @@ public class BaseEditTable extends JTable
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupInputMap()
   {
     this.getActionMap().put("TabGridCell", new GridCellAction(GridCellAction.MOVE_TAB));
@@ -122,7 +122,7 @@ public class BaseEditTable extends JTable
         "ShiftTabGridCell");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Over-ridden cause a JTable, when disabled, does not grey out the individual
   // cells.
   @Override
@@ -134,12 +134,12 @@ public class BaseEditTable extends JTable
 
     return (loComponent);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 class GridCellAction extends AbstractAction
 {
   public final static int MOVE_TAB = 0;
@@ -153,13 +153,13 @@ class GridCellAction extends AbstractAction
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public GridCellAction(final int tnDirection)
   {
     this.fnDirection = tnDirection;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void actionPerformed(final ActionEvent e)
   {
@@ -252,12 +252,12 @@ class GridCellAction extends AbstractAction
       loTable.getEditorComponent().requestFocus();
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 // Cause when a JTable is disabled, the header cells do not become grey.
 class ButtonEnabledRenderer extends JButton implements TableCellRenderer
 {
@@ -267,7 +267,7 @@ class ButtonEnabledRenderer extends JButton implements TableCellRenderer
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ButtonEnabledRenderer()
   {
     this.foOriginalForeColor = this.getForeground();
@@ -276,7 +276,7 @@ class ButtonEnabledRenderer extends JButton implements TableCellRenderer
     this.setMargin((Insets) loInset.clone());
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public Component getTableCellRendererComponent(final JTable toTable, final Object toValue,
                                                  final boolean tlIsSelected, final boolean tlHasFocus, final int tnRow, final int tnColumn)
@@ -289,8 +289,8 @@ class ButtonEnabledRenderer extends JButton implements TableCellRenderer
 
     return (loButton);
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

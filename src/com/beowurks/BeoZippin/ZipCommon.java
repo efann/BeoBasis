@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -21,9 +21,9 @@ import java.awt.Window;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public final class ZipCommon
 {
   protected final static int CHOICE_YES = 0;
@@ -36,19 +36,19 @@ public final class ZipCommon
 
   private final static StringBuilder fcExceptionError = new StringBuilder(256);
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private ZipCommon()
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected void errorExceptionInThread(final Window toWindow, final String tcException)
   {
     ZipCommon.errorExceptionInThread(toWindow, "Please notify support@beowurks.com of the following error:",
             tcException);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected void errorExceptionInThread(final Window toWindow, final String tcMessage, final String tcException)
   {
     ZipCommon.setExceptionError(tcMessage, tcException);
@@ -56,7 +56,7 @@ public final class ZipCommon
     Util.errorMessageInThread(toWindow, new JLabel(ZipCommon.fcExceptionError.toString()));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected void errorException(final Window toWindow, final String tcMessage, final String tcException)
   {
     ZipCommon.setExceptionError(tcMessage, tcException);
@@ -64,13 +64,13 @@ public final class ZipCommon
     Util.errorMessage(toWindow, new JLabel(ZipCommon.fcExceptionError.toString()));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected void errorException(final Window toWindow, final String tcException)
   {
     ZipCommon.errorException(toWindow, "Please notify support@beowurks.com of the following error:", tcException);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected boolean yesnoException(final Window toWindow, final String tcMessage, final String tcException)
   {
     ZipCommon.setExceptionError(tcMessage, tcException);
@@ -78,7 +78,7 @@ public final class ZipCommon
     return (Util.yesNo(toWindow, ZipCommon.fcExceptionError.toString()));
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static protected int yesNoAllCancel(final Window toWindow, final String tcTitle, final String tcMessage)
   {
     final int lnResults = JOptionPane.showOptionDialog(toWindow, tcMessage, tcTitle, JOptionPane.YES_NO_CANCEL_OPTION,
@@ -92,7 +92,7 @@ public final class ZipCommon
     return (-1);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   static private void setExceptionError(final String tcMessage, final String tcException)
   {
     Util.clearStringBuilder(ZipCommon.fcExceptionError);
@@ -103,8 +103,8 @@ public final class ZipCommon
     ZipCommon.fcExceptionError.append(tcException);
     ZipCommon.fcExceptionError.append(" </i><p></p></font></html>");
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

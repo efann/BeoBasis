@@ -12,60 +12,24 @@
  * Contributor(s):   -;
  */
 
-package com.beowurks.BeoLookFeel;
+package com.beowurks.BeoDesktop;
 
-import javax.swing.plaf.ColorUIResource;
-import javax.swing.plaf.metal.DefaultMetalTheme;
-
-/**
- * This class describes a theme using "blue-green" colors.
- * <p/>
- * 1.9 07/26/04
- *
- * @author Steve Wilson
- *         <p/>
- *         Modified by Eddie Fann, August, 2005
- *         <p/>
- *         From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/AquaTheme.java
- */
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
-public class LFMTAqua extends DefaultMetalTheme
+public interface IDesktopAdapter
 {
-  private static final ColorUIResource PRIMARY1 = new ColorUIResource(102, 153, 153);
-  private static final ColorUIResource PRIMARY2 = new ColorUIResource(128, 192, 192);
-  private static final ColorUIResource PRIMARY3 = new ColorUIResource(159, 235, 235);
+  // ---------------------------------------------------------------------------------------------------------------------
+  void AboutHandler();
 
   // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  public String getName()
-  {
-    return ("Aqua");
-  }
+  void PreferencesHandler();
 
   // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary1()
-  {
-    return (LFMTAqua.PRIMARY1);
-  }
+  void QuitHandler();
 
-  // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary2()
-  {
-    return (LFMTAqua.PRIMARY2);
-  }
-
-  // ---------------------------------------------------------------------------------------------------------------------
-  @Override
-  protected ColorUIResource getPrimary3()
-  {
-    return (LFMTAqua.PRIMARY3);
-  }
   // ---------------------------------------------------------------------------------------------------------------------
 }
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------

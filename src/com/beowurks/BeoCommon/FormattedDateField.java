@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -27,9 +27,9 @@ import javax.swing.KeyStroke;
 import javax.swing.text.DateFormatter;
 import javax.swing.text.DefaultFormatterFactory;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class FormattedDateField extends BaseFormattedField implements KeyListener
 {
   private final Calendar foCalendar = Calendar.getInstance();
@@ -38,7 +38,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField()
   {
 
@@ -52,7 +52,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField(final Object toValue)
   {
     super(toValue);
@@ -67,7 +67,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField(final Format toFormat)
   {
     super(toFormat);
@@ -82,7 +82,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField(final JFormattedTextField.AbstractFormatter toFormatter)
   {
     super(toFormatter);
@@ -97,7 +97,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField(final JFormattedTextField.AbstractFormatterFactory toFactory)
   {
     super(toFactory);
@@ -112,7 +112,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public FormattedDateField(final JFormattedTextField.AbstractFormatterFactory toFactory, final Object toCurrentValue)
   {
     super(toFactory, toCurrentValue);
@@ -127,7 +127,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   protected void setupFormattedField() throws Exception
   {
@@ -149,7 +149,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     this.addKeyListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void setText(final String tcValue)
   {
@@ -169,7 +169,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
 
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public long getTimeValue()
   {
     // Kind of a bug. If you retrieve the value before committing
@@ -188,7 +188,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     return ((loValue instanceof Date) ? ((Date) loValue).getTime() : 0);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected boolean alterDateValue(final char tcChar)
   {
     boolean llAltered = false;
@@ -265,16 +265,16 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
     return (llAltered);
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface KeyListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void keyReleased(final KeyEvent toEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void keyPressed(final KeyEvent toEvent)
   {
@@ -301,7 +301,7 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
       }
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // This method checks the key pressed, allowing the following
   // unique behaviors:
   // +,= next day
@@ -325,9 +325,9 @@ public class FormattedDateField extends BaseFormattedField implements KeyListene
       toEvent.consume();
     }
   }
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

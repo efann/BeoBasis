@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -31,9 +31,9 @@ import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 // From http://ww05.com/swing-in-the-jeditorpane-component-in-the-realization-of-the-css-is-a-hyperlink/
 // a:hover doesn't work natively like in a browser. Here's a fix. . . .
 public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener, MouseListener
@@ -45,14 +45,14 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JEditorPaneFixHTML()
   {
 
     this.initializeAll();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JEditorPaneFixHTML(final String url) throws IOException
   {
     super(url);
@@ -60,7 +60,7 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     this.initializeAll();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JEditorPaneFixHTML(final String type, final String text)
   {
     super(type, text);
@@ -68,7 +68,7 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     this.initializeAll();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JEditorPaneFixHTML(final URL initialPage) throws IOException
   {
     super(initialPage);
@@ -76,20 +76,20 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     this.initializeAll();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public JScrollPane getScrollPane()
   {
     return (this.foScrollPane);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public void setNeverScroll()
   {
     this.foScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     this.foScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void initializeAll()
   {
     this.foScrollPane.setViewportView(this);
@@ -104,14 +104,14 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     this.setupStyles();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupListeners()
   {
     this.addMouseListener(this);
     this.addHyperlinkListener(this);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void setupStyles()
   {
     final HTMLDocument loDoc = (HTMLDocument) this.getDocument();
@@ -120,7 +120,7 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     loStyle.addRule("a:hover { text-decoration: underline; }");
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   synchronized private void updateHyperlinkStyle(final JEditorPane toEditorPane, final String tcStyleName, final Element toElement)
   {
     final HTMLDocument loDoc = (HTMLDocument) toEditorPane.getDocument();
@@ -145,8 +145,8 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
 
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface HyperlinkListener
   // From http://ww05.com/swing-in-the-jeditorpane-component-in-the-realization-of-the-css-is-a-hyperlink/
   // a:hover doesn't work natively like in a browser. Here's a fix. . . .
@@ -176,33 +176,33 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Interface MouseListener
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseClicked(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mousePressed(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseReleased(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseEntered(final MouseEvent toMouseEvent)
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void mouseExited(final MouseEvent toMouseEvent)
   {
@@ -213,9 +213,9 @@ public class JEditorPaneFixHTML extends JEditorPane implements HyperlinkListener
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -16,27 +16,27 @@ package com.beowurks.BeoExport;
 
 import java.io.IOException;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ExportExcel21 extends ExportBaseStream
 {
   protected short fnTypeRec;
   protected short fnDataLength;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ExportExcel21(final String tcSaveFileName)
   {
     super(tcSaveFileName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeSeparator() throws IOException
   {
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeEOL() throws IOException
   {
@@ -44,7 +44,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.fnCol = 0;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeBOF() throws IOException
   {
@@ -57,7 +57,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.writeArray(laBuffer);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeEOF() throws IOException
   {
@@ -67,21 +67,21 @@ public class ExportExcel21 extends ExportBaseStream
     this.writeRecordHeader();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void setBIFFBOF()
   {
     this.fnTypeRec = ExportBase.BOF_BIFF2;
     this.fnDataLength = 4;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void setBIFFDIM()
   {
     this.fnTypeRec = ExportBase.DIMM_BIFF2;
     this.fnDataLength = 8;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void writeRecordHeader() throws IOException
   {
     final short[] laBuffer = new short[2];
@@ -92,7 +92,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.writeArray(laBuffer);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDimensions() throws IOException
   {
@@ -108,28 +108,28 @@ public class ExportExcel21 extends ExportBaseStream
     this.writeArray(laBuffer);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeLabel(final String tcFieldName) throws IOException
   {
     this.writeDataField(tcFieldName);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDataField(final int tnValue) throws IOException
   {
     this.writeDataField((double) tnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDataField(final long tnValue) throws IOException
   {
     this.writeDataField((double) tnValue);
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDataField(final double tnValue) throws IOException
   {
@@ -153,7 +153,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.fnCol++;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDataField(final String tcValue) throws IOException
   {
@@ -180,7 +180,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.fnCol++;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void writeDataField(final boolean tlValue) throws IOException
   {
@@ -210,7 +210,7 @@ public class ExportExcel21 extends ExportBaseStream
     this.fnCol++;
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // Remember: Excel expects values that are stored in byte-reversed form (less
   // significant byte first).
   // So you can't use DataOutputStream.writeDouble, writeInt, etc. because
@@ -225,7 +225,7 @@ public class ExportExcel21 extends ExportBaseStream
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void writeArray(final short[] taArray) throws IOException
   {
     for (final short lnValue : taArray)
@@ -237,7 +237,7 @@ public class ExportExcel21 extends ExportBaseStream
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   protected void writeArray(final char[] taArray) throws IOException
   {
     for (final char lnValue : taArray)
@@ -245,8 +245,8 @@ public class ExportExcel21 extends ExportBaseStream
       this.foOutStream.write(lnValue);
     }
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@
  * Copyright(c) 2001-2019, by Beowurks.
  *
  * This application is open-source software; you can redistribute it and/or modify it
- * under the terms of the Eclipse Public License, Version 1.0 (http://opensource.org/licenses/EPL-1.0).
+ * under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).
  *
  * Original Author:  Eddie Fann
  * Contributor(s):   -;
@@ -30,9 +30,9 @@ import java.util.zip.ZipFile;
 
 import javax.swing.SwingUtilities;
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 public class ThreadPopulateZipTable extends Thread
 {
   private final BaseFrame foFrame;
@@ -47,7 +47,7 @@ public class ThreadPopulateZipTable extends Thread
   private Method fmFinishCallbackMethod = null;
   private Object[] faFinishParameters = null;
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ThreadPopulateZipTable(final BaseFrame toFrame, final String tcFileName, final ZipTable toZipTable,
                                 final int tnInitialSort, final boolean tlInitialAscend, final Object toFinishCallbackObject,
                                 final Method tmFinishCallbackMethod, final Object[] taFinishParameters)
@@ -70,7 +70,7 @@ public class ThreadPopulateZipTable extends Thread
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   public ThreadPopulateZipTable(final BaseFrame toFrame, final String tcFileName, final ZipTable toZipTable,
                                 final int tnInitialSort, final boolean tlInitialAscend, final boolean tlAutoSizeColumns,
                                 final Object toFinishCallbackObject, final Method tmFinishCallbackMethod, final Object[] taFinishParameters)
@@ -93,7 +93,7 @@ public class ThreadPopulateZipTable extends Thread
     }
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   // I can't run this thread in the EventQueue: it takes too long. And if I add
   // rows to the table model, it takes too long because with every row added,
   // a fireTableRowsInserted is issued. So by adding with the data vector,
@@ -177,7 +177,7 @@ public class ThreadPopulateZipTable extends Thread
     this.finishRoutine();
   }
 
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
   private void finishRoutine()
   {
     // It doesn't matter if faParameters is null.
@@ -214,8 +214,8 @@ public class ThreadPopulateZipTable extends Thread
 
     });
   }
-  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------------------------------------------
 }
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------

@@ -44,7 +44,6 @@ public class DesktopHelper
     }
     catch (Exception loError)
     {
-      Util.errorMessage(null, loError.getMessage());
     }
 
     try
@@ -55,7 +54,6 @@ public class DesktopHelper
     }
     catch (Exception loError)
     {
-      Util.errorMessage(null, loError.getMessage());
     }
 
     try
@@ -66,7 +64,6 @@ public class DesktopHelper
     }
     catch (Exception loError)
     {
-      Util.errorMessage(null, loError.getMessage());
     }
 
   }

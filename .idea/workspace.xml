@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae30d00d-a2b5-491b-abd2-61cb7e3e3dee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" afterDir="false" />
-    </list>
+    <list default="true" id="ae30d00d-a2b5-491b-abd2-61cb7e3e3dee" name="Default" comment="" />
     <ignored path="BeoBasis.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -501,6 +499,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6732283" visible="true" weight="0.20842217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

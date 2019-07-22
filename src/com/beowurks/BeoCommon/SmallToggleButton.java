@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -13,15 +14,16 @@
 
 package com.beowurks.BeoCommon;
 
+import java.awt.Insets;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.border.SoftBevelBorder;
-import java.awt.Insets;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 // Class SmallToggleButton unchanged from chapter 12
 // ---------------------------------------------------------------------------------------------------------------------

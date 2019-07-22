@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -13,6 +14,11 @@
 
 package com.beowurks.BeoCommon;
 
+import java.awt.AWTEvent;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Window;
+
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -20,10 +26,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 import javax.swing.event.InternalFrameEvent;
 import javax.swing.event.InternalFrameListener;
-import java.awt.AWTEvent;
-import java.awt.Dimension;
-import java.awt.EventQueue;
-import java.awt.Window;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

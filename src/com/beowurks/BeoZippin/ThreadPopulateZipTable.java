@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -17,7 +18,6 @@ import com.beowurks.BeoCommon.BaseFrame;
 import com.beowurks.BeoCommon.Util;
 import com.beowurks.BeoTable.SortingTableModel;
 
-import javax.swing.SwingUtilities;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -27,6 +27,8 @@ import java.util.Enumeration;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
+import javax.swing.SwingUtilities;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -122,7 +124,8 @@ public class ThreadPopulateZipTable extends Thread
       // to only that line. Any unchecked warnings following the below line will
       // still be
       // called.
-      @SuppressWarnings({"unchecked", "rawtypes"}) final Vector<Vector> loDataVector = loModel.getDataVector();
+      @SuppressWarnings({"unchecked", "rawtypes"})
+      final Vector<Vector> loDataVector = loModel.getDataVector();
 
       while (loEnum.hasMoreElements())
       {
@@ -159,16 +162,16 @@ public class ThreadPopulateZipTable extends Thread
       final int lnColumn = llLoadFromProperties ? this.fnInitialSort : loModel.getSortColumn();
 
       this.foZipTable.sortColumn(lnColumn, false, llLoadFromProperties ? this.flInitialAscend : this.foZipTable
-          .getSortButtonRenderer().isCurrentColumnAscending());
+              .getSortButtonRenderer().isCurrentColumnAscending());
     }
     else
     {
       final File loFile = new File(this.fcFileName);
       final String lcCause = (loFile.length() > Integer.MAX_VALUE) ? "The file is over 2 Gigabytes in size."
-          : "The file is an invalid/corrupt zip file";
+              : "The file is an invalid/corrupt zip file";
 
       ZipCommon.errorExceptionInThread(this.foFrame, "There was an error in opening <b>" + this.fcFileName + "</b>. "
-          + lcCause, loError.toString());
+              + lcCause, loError.toString());
     }
 
     this.finishRoutine();
@@ -191,7 +194,7 @@ public class ThreadPopulateZipTable extends Thread
         try
         {
           ThreadPopulateZipTable.this.fmFinishCallbackMethod.invoke(ThreadPopulateZipTable.this.foFinishCallbackObject,
-              ThreadPopulateZipTable.this.faFinishParameters);
+                  ThreadPopulateZipTable.this.faFinishParameters);
 
           if (ThreadPopulateZipTable.this.flAutoSizeColumns)
           {

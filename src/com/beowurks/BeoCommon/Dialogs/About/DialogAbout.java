@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -21,18 +22,6 @@ import com.beowurks.BeoCommon.Util;
 import com.beowurks.BeoTable.SortingTable;
 import com.beowurks.BeoTable.SortingTableModel;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JEditorPane;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.border.BevelBorder;
-import javax.swing.table.TableColumnModel;
-import javax.swing.text.html.HTMLDocument;
-import javax.swing.text.html.StyleSheet;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -45,6 +34,19 @@ import java.awt.event.MouseListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.BevelBorder;
+import javax.swing.table.TableColumnModel;
+import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.StyleSheet;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -71,7 +73,7 @@ public class DialogAbout extends BaseDialog implements ActionListener, MouseList
   // Gets rid of the following error:
   // serializable class has no definition of serialVersionUID
   private static final long serialVersionUID = 1L;
-
+  
   // ---------------------------------------------------------------------------------------------------------------------
   public DialogAbout(final JFrame toFrame, final IAbout toAbout)
   {

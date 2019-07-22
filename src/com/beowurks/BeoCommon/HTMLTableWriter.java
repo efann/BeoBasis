@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -103,7 +104,7 @@ public class HTMLTableWriter
   public boolean writeTableHeader()
   {
     final String lcHeader = "<html>" + "\n" + "<title>Data Table</title>" + "\n"
-        + "<body bgcolor=\"#FFFFFF\" text=\"#000000\">" + "\n" + "<table border=\"1\">" + "\n";
+            + "<body bgcolor=\"#FFFFFF\" text=\"#000000\">" + "\n" + "<table border=\"1\">" + "\n";
 
     return (this.writeString(lcHeader));
   }

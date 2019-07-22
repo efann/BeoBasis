@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -24,13 +25,16 @@ package com.beowurks.BeoTable;
 
 import com.beowurks.BeoCommon.Util;
 
-import javax.swing.*;
-import javax.swing.table.JTableHeader;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableColumnModel;
-import javax.swing.table.TableModel;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Insets;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -38,6 +42,27 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+
+import javax.swing.Icon;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JViewport;
+import javax.swing.KeyStroke;
+import javax.swing.ListSelectionModel;
+import javax.swing.Popup;
+import javax.swing.PopupFactory;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.Timer;
+import javax.swing.UIManager;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
+import javax.swing.table.TableModel;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -117,9 +142,9 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
     // somewhat with the behavior
     // established in the below keyReleased routine.
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_HOME, 0),
-        "none");
+            "none");
     this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_END, 0),
-        "none");
+            "none");
 
     this.getTableHeader().addMouseListener(this);
     this.getTableHeader().addMouseMotionListener(this);
@@ -186,7 +211,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
       final TableColumn loColumn = loColumnModel.getColumn(lnRow);
 
       final TableCellPaddedRenderer loRenderer = (loObject instanceof Number) ? new TableCellPaddedRenderer(
-          SwingConstants.RIGHT) : new TableCellPaddedRenderer();
+              SwingConstants.RIGHT) : new TableCellPaddedRenderer();
 
       loColumn.setCellRenderer(loRenderer);
     }
@@ -202,7 +227,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
 
     final TableColumnModel loModel = this.getColumnModel();
     final int lnColumns = (taColumnProps.length > loModel.getColumnCount()) ? loModel.getColumnCount()
-        : taColumnProps.length;
+            : taColumnProps.length;
 
     // Set the preferred widths.
     for (int i = 0; i < lnColumns; ++i)
@@ -268,7 +293,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
 
     final int lnSortState = tlAscending ? SortButtonRenderer.STATE_UP : SortButtonRenderer.STATE_DOWN;
     this.foSortButtonRenderer.setSortColumn(this.convertColumnIndexToView(tnColumnIndexToModel), tlToggleState,
-        tlToggleState ? SortButtonRenderer.STATE_NONE : lnSortState);
+            tlToggleState ? SortButtonRenderer.STATE_NONE : lnSortState);
 
     loSortModel.sortColumn(tnColumnIndexToModel, this.foSortButtonRenderer.isCurrentColumnAscending());
 
@@ -640,7 +665,7 @@ public class SortingTable extends JTable implements MouseListener, MouseMotionLi
 
     final char lcChar = toEvent.getKeyChar();
     if (((lcChar < SortingTable.IS_SPACE) || (lcChar == SortingTable.IS_DELETE))
-        && (lcChar != SortingTable.IS_BACKSPACE))
+            && (lcChar != SortingTable.IS_BACKSPACE))
     {
       EventQueue.invokeLater(new DisplayISMessage(this, null));
       return;
@@ -771,7 +796,7 @@ class DisplayISMessage implements Runnable
     }
 
     this.foSortingTable.lblIS_Label.setText("<html><i>Incremetal Search Phrase:</i> <b>" + tcISDisplayText
-        + "</b></html>");
+            + "</b></html>");
 
     if (this.foSortingTable.getParent() instanceof JViewport)
     {
@@ -781,8 +806,8 @@ class DisplayISMessage implements Runnable
       // you could get a
       // negative number.
       this.foSortingTable.popIS_TextWindow = PopupFactory.getSharedInstance().getPopup(null,
-          this.foSortingTable.pnlIS_Panel, this.foSortingTable.getParent().getLocationOnScreen().x,
-          this.foSortingTable.getTableHeader().getLocationOnScreen().y);
+              this.foSortingTable.pnlIS_Panel, this.foSortingTable.getParent().getLocationOnScreen().x,
+              this.foSortingTable.getTableHeader().getLocationOnScreen().y);
 
       this.foSortingTable.popIS_TextWindow.show();
     }

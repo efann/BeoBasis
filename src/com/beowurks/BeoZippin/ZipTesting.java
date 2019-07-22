@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -147,13 +148,13 @@ public class ZipTesting
         if (loEntry.getCrc() != loCRC32.getValue())
         {
           throw (new Exception("Check sums are corrupt for " + loEntry.getName() + " in the zip file, "
-              + this.fcZipFile + "."));
+                  + this.fcZipFile + "."));
         }
 
         if (lnTotalRead != lnFileSize)
         {
           throw (new Exception("Read " + lnTotalRead + " bytes for " + loEntry.getName() + " in the zip file, "
-              + this.fcZipFile + ": should be " + lnFileSize + " bytes."));
+                  + this.fcZipFile + ": should be " + lnFileSize + " bytes."));
         }
       }
     }
@@ -225,13 +226,13 @@ public class ZipTesting
         if (loEntry.getCrc() != loCRC32.getValue())
         {
           throw (new Exception("Check sums are corrupt for " + loEntry.getName() + " in the zip file, "
-              + this.fcZipFile + "."));
+                  + this.fcZipFile + "."));
         }
 
         if (lnTotalRead != lnFileSize)
         {
           throw (new Exception("Read " + lnTotalRead + " bytes for " + loEntry.getName() + " in the zip file, "
-              + this.fcZipFile + ": should be " + lnFileSize + " bytes."));
+                  + this.fcZipFile + ": should be " + lnFileSize + " bytes."));
         }
       }
     }

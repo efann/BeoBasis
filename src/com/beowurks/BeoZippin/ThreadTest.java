@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -17,8 +18,9 @@ import com.beowurks.BeoCommon.BaseFrame;
 import com.beowurks.BeoCommon.CancelDialog;
 import com.beowurks.BeoCommon.Util;
 
-import javax.swing.JLabel;
 import java.util.Date;
+
+import javax.swing.JLabel;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -71,7 +73,7 @@ public class ThreadTest extends Thread
     {
       llOkay = false;
       ZipCommon.errorExceptionInThread(this.foFrame, "There was an error in testing the file(s) in the archive, <b>"
-          + this.fcFileName + "</b>.", loErr.toString());
+              + this.fcFileName + "</b>.", loErr.toString());
     }
     finally
     {
@@ -90,15 +92,15 @@ public class ThreadTest extends Thread
     else if (llOkay)
     {
       Util.infoMessageInThread(this.foFrame, new JLabel("<html><font face=\"Arial\"><i><b>" + this.fcFileName
-          + "</i></b> is okay!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
-          + ")</i><br></font></html>"));
+              + "</i></b> is okay!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
+              + ")</i><br></font></html>"));
     }
     else
     {
       Util.errorMessageInThread(this.foFrame, new JLabel(
-          "<html><font face=\"Arial\">There was an error in testing files in <i><b>" + this.fcFileName
-              + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
-              + ")</i><br></font></html>"));
+              "<html><font face=\"Arial\">There was an error in testing files in <i><b>" + this.fcFileName
+                      + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
+                      + ")</i><br></font></html>"));
     }
   }
   // ---------------------------------------------------------------------------------------------------------------------

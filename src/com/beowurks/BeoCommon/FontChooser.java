@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -12,6 +13,16 @@
  */
 
 package com.beowurks.BeoCommon;
+
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridBagConstraints;
+import java.awt.Toolkit;
+import java.awt.Window;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JCheckBox;
 import javax.swing.JList;
@@ -25,15 +36,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GraphicsEnvironment;
-import java.awt.GridBagConstraints;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -47,7 +49,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
 
   private final JScrollPane scrFontNames1 = new JScrollPane();
   private final JList lstFontNames1 = new JList(GraphicsEnvironment.getLocalGraphicsEnvironment()
-      .getAvailableFontFamilyNames());
+          .getAvailableFontFamilyNames());
   private final JPanel pnlComponents = new JPanel();
 
   private final JCheckBox chkBold1 = new JCheckBox();
@@ -182,14 +184,14 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
     this.pnlComponents.setLayout(loGrid);
 
     this.pnlComponents.add(this.scrFontNames1,
-        loGrid.getConstraint(0, 0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
+            loGrid.getConstraint(0, 0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
     this.pnlComponents.add(this.spnFontSize1,
-        loGrid.getConstraint(0, 1, GridBagConstraints.WEST, GridBagConstraints.NONE));
+            loGrid.getConstraint(0, 1, GridBagConstraints.WEST, GridBagConstraints.NONE));
     this.pnlComponents.add(this.chkBold1, loGrid.getConstraint(0, 2, GridBagConstraints.WEST, GridBagConstraints.NONE));
     this.pnlComponents.add(this.chkItalic1,
-        loGrid.getConstraint(0, 3, GridBagConstraints.WEST, GridBagConstraints.NONE));
+            loGrid.getConstraint(0, 3, GridBagConstraints.WEST, GridBagConstraints.NONE));
     this.pnlComponents.add(this.txtPreview1,
-        loGrid.getConstraint(0, 4, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
+            loGrid.getConstraint(0, 4, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
   }
 
   // ---------------------------------------------------------------------------------------------------------------------
@@ -247,7 +249,7 @@ public class FontChooser implements ChangeListener, ListSelectionListener, ItemL
   public boolean showDialog()
   {
     final int lnResults = JOptionPane.showConfirmDialog(this.foWindow, new Object[]{this.pnlComponents},
-        "Font Chooser", JOptionPane.OK_CANCEL_OPTION);
+            "Font Chooser", JOptionPane.OK_CANCEL_OPTION);
 
     return (lnResults == JOptionPane.OK_OPTION);
   }

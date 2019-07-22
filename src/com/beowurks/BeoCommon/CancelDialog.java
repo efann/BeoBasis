@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -13,14 +14,15 @@
 
 package com.beowurks.BeoCommon;
 
+import java.awt.Window;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
-import java.awt.Window;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -48,7 +50,7 @@ public class CancelDialog implements ComponentListener
     if (CancelDialog.foCancelPane == null)
     {
       CancelDialog.foCancelPane = new JOptionPane(this.fcLabel, JOptionPane.INFORMATION_MESSAGE,
-          JOptionPane.DEFAULT_OPTION, null, new Object[]{UIManager.getString("OptionPane.cancelButtonText")}, null);
+              JOptionPane.DEFAULT_OPTION, null, new Object[]{UIManager.getString("OptionPane.cancelButtonText")}, null);
     }
 
     if (CancelDialog.foCancelDialog == null)

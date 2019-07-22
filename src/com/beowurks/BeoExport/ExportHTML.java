@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -42,8 +43,8 @@ public class ExportHTML extends ExportBaseStream
   public void writeBOF() throws IOException
   {
     final String lcHeader = "<html>" + ExportHTML.LINE_SEPARATOR + "<title>Data Table</title>"
-        + ExportHTML.LINE_SEPARATOR + "<body bgcolor=\"#FFFFFF\" text=\"#000000\">" + ExportHTML.LINE_SEPARATOR
-        + "<table border=\"1\">" + ExportHTML.LINE_SEPARATOR;
+            + ExportHTML.LINE_SEPARATOR + "<body bgcolor=\"#FFFFFF\" text=\"#000000\">" + ExportHTML.LINE_SEPARATOR
+            + "<table border=\"1\">" + ExportHTML.LINE_SEPARATOR;
 
     this.writeString(lcHeader);
   }
@@ -53,7 +54,7 @@ public class ExportHTML extends ExportBaseStream
   public void writeEOF() throws IOException
   {
     final String lcFooter = "</table>" + ExportHTML.LINE_SEPARATOR + "</body>" + ExportHTML.LINE_SEPARATOR + "</html>"
-        + ExportHTML.LINE_SEPARATOR;
+            + ExportHTML.LINE_SEPARATOR;
 
     this.writeString(lcFooter);
   }

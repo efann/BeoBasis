@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -17,8 +18,9 @@ import com.beowurks.BeoCommon.BaseFrame;
 import com.beowurks.BeoCommon.CancelDialog;
 import com.beowurks.BeoCommon.Util;
 
-import javax.swing.JLabel;
 import java.util.Date;
+
+import javax.swing.JLabel;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -71,7 +73,7 @@ public class ThreadExtract extends Thread
       if (!this.foSwingProgressComponents.isCanceled())
       {
         final ZipExtraction loExtract = new ZipExtraction(this.fcArchiveName, this.foZipTable, this.fcStartDirectory,
-            this.flUsePath, this.flOverwriteExisting, this.foFrame, this.foSwingProgressComponents);
+                this.flUsePath, this.flOverwriteExisting, this.foFrame, this.foSwingProgressComponents);
         loExtract.extractFiles();
       }
     }
@@ -79,7 +81,7 @@ public class ThreadExtract extends Thread
     {
       llOkay = false;
       ZipCommon.errorExceptionInThread(this.foFrame, "There was an error in extracting files from the archive, <b>"
-          + this.fcArchiveName + "</b>.", loErr.toString());
+              + this.fcArchiveName + "</b>.", loErr.toString());
     }
     finally
     {
@@ -98,18 +100,18 @@ public class ThreadExtract extends Thread
     else if (llOkay)
     {
       Util.infoMessageInThread(this.foFrame,
-          new JLabel("<html><font face=\"Arial\">The files were successfully extracted to <i><b>"
-              + this.fcStartDirectory + "</i></b> from the archive of <i><b>" + this.fcArchiveName
-              + "</i></b>.<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
-              + ")</i><br></font></html>"));
+              new JLabel("<html><font face=\"Arial\">The files were successfully extracted to <i><b>"
+                      + this.fcStartDirectory + "</i></b> from the archive of <i><b>" + this.fcArchiveName
+                      + "</i></b>.<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
+                      + ")</i><br></font></html>"));
     }
     else
     {
       Util.errorMessageInThread(this.foFrame,
-          new JLabel("<html><font face=\"Arial\">There was an error in extracting files to <i><b>"
-              + this.fcStartDirectory + "</i></b> from the archive of <i><b>" + this.fcArchiveName
-              + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
-              + ")</i><br></font></html>"));
+              new JLabel("<html><font face=\"Arial\">There was an error in extracting files to <i><b>"
+                      + this.fcStartDirectory + "</i></b> from the archive of <i><b>" + this.fcArchiveName
+                      + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
+                      + ")</i><br></font></html>"));
     }
   }
   // ---------------------------------------------------------------------------------------------------------------------

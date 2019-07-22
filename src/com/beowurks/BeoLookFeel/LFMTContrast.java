@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -26,10 +27,10 @@ import javax.swing.plaf.metal.DefaultMetalTheme;
  * This class describes a higher-contrast Metal Theme.
  *
  * @author Michael C. Albers
- * <p/>
- * Modified by Eddie Fann, August, 2005
- * <p/>
- * From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/ContrastTheme.java
+ *         <p/>
+ *         Modified by Eddie Fann, August, 2005
+ *         <p/>
+ *         From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/ContrastTheme.java
  * @version 1.10 07/26/04
  */
 

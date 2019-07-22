@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -13,15 +14,35 @@
 
 package com.beowurks.BeoCommon;
 
-import javax.swing.*;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
-import javax.swing.plaf.FontUIResource;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Cursor;
+import java.awt.Desktop;
+import java.awt.Dialog;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -33,6 +54,25 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
+
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JDesktopPane;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.KeyStroke;
+import javax.swing.SwingUtilities;
+import javax.swing.UIDefaults;
+import javax.swing.UIManager;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import javax.swing.plaf.FontUIResource;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -139,7 +179,7 @@ public final class Util
       try
       {
         final FileInputStream loStream = new FileInputStream(Util.includeTrailingBackslash(System
-            .getProperty("user.dir")) + "src" + Util.FILE_SEPARATOR_CHAR + "META-INF" + Util.FILE_SEPARATOR_CHAR + "MANIFEST.MF");
+                .getProperty("user.dir")) + "src" + Util.FILE_SEPARATOR_CHAR + "META-INF" + Util.FILE_SEPARATOR_CHAR + "MANIFEST.MF");
         final Manifest loManifest = new Manifest(loStream);
         final Attributes loMap = loManifest.getMainAttributes();
         lcTitle.append(loMap.getValue(Util.MANI_IMP_TITLE)).append(" ").append(loMap.getValue(Util.MANI_IMP_VERSION));
@@ -479,7 +519,7 @@ public final class Util
     final boolean llNotOne = (Math.abs(lnSeconds - 1.0) > lnCompare);
 
     final String lcString = lnMinutes + " minute" + ((lnMinutes != 1) ? "s" : "") + " and " + lnSeconds + " second"
-        + ((llNotOne) ? "s" : "");
+            + ((llNotOne) ? "s" : "");
 
     return (lcString);
   }
@@ -644,8 +684,8 @@ public final class Util
     final String lcTitle = Util.getTitle();
 
     final JOptionPane loOption = new JOptionPane((toMessage instanceof String) ? Util.wrapWords((String) toMessage, Util.WORD_WRAP_CONSTANT) : toMessage,
-        JOptionPane.QUESTION_MESSAGE,
-        JOptionPane.YES_NO_OPTION);
+            JOptionPane.QUESTION_MESSAGE,
+            JOptionPane.YES_NO_OPTION);
 
     Util.setOptionPaneComponents(loOption, null);
 
@@ -1090,8 +1130,8 @@ public final class Util
     Util.clearStringBuilder(Util.fcMemoryDisplay);
 
     Util.fcMemoryDisplay.append(Util.foMemoryDecimalFormat.format(lnUsed)).append(" bytes used out of ")
-        .append(Util.foMemoryDecimalFormat.format(lnTotal)).append(" (")
-        .append(Util.foMemoryDecimalFormat.format(lnFree)).append(" bytes free)");
+            .append(Util.foMemoryDecimalFormat.format(lnTotal)).append(" (")
+            .append(Util.foMemoryDecimalFormat.format(lnFree)).append(" bytes free)");
 
     return (Util.fcMemoryDisplay.toString());
   }
@@ -1135,11 +1175,11 @@ public final class Util
         final Manifest loManifest = new Manifest(loInput);
         final Attributes loMap = loManifest.getMainAttributes();
         lcFullVersion.append(loMap.getValue(Util.MANI_IMP_TITLE)).append(Util.MANI_SEPARATOR)
-            .append(loMap.getValue(Util.MANI_IMP_VENDOR)).append(Util.MANI_SEPARATOR)
-            .append(loMap.getValue(Util.MANI_IMP_VERSION)).append(Util.MANI_SEPARATOR)
-            .append(loMap.getValue(Util.MANI_SPEC_TITLE)).append(Util.MANI_SEPARATOR)
-            .append(loMap.getValue(Util.MANI_SPEC_VENDOR)).append(Util.MANI_SEPARATOR)
-            .append(loMap.getValue(Util.MANI_SPEC_VERSION));
+                .append(loMap.getValue(Util.MANI_IMP_VENDOR)).append(Util.MANI_SEPARATOR)
+                .append(loMap.getValue(Util.MANI_IMP_VERSION)).append(Util.MANI_SEPARATOR)
+                .append(loMap.getValue(Util.MANI_SPEC_TITLE)).append(Util.MANI_SEPARATOR)
+                .append(loMap.getValue(Util.MANI_SPEC_VENDOR)).append(Util.MANI_SEPARATOR)
+                .append(loMap.getValue(Util.MANI_SPEC_VERSION));
 
         loInput.close();
       }
@@ -1275,7 +1315,7 @@ public final class Util
       catch (final IOException | URISyntaxException loErr)
       {
         Util.errorMessage(null,
-            "Unfortunately, " + lcFile + " could not load for the following reason:\n\n" + loErr.getMessage());
+                "Unfortunately, " + lcFile + " could not load for the following reason:\n\n" + loErr.getMessage());
       }
     }
     else
@@ -1379,8 +1419,8 @@ public final class Util
     final String lcTitle = Util.getTitle();
 
     final int lnResults = JOptionPane.showConfirmDialog(toComponent,
-        toMessage instanceof String ? Util.wrapWords((String) toMessage, Util.WORD_WRAP_CONSTANT) : toMessage, lcTitle,
-        JOptionPane.OK_CANCEL_OPTION);
+            toMessage instanceof String ? Util.wrapWords((String) toMessage, Util.WORD_WRAP_CONSTANT) : toMessage, lcTitle,
+            JOptionPane.OK_CANCEL_OPTION);
 
     return (lnResults == JOptionPane.OK_OPTION);
   }
@@ -1782,7 +1822,7 @@ public final class Util
     };
 
     toDialog.getRootPane().registerKeyboardAction(loActionListener,
-        KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
+            KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
   }
 // ---------------------------------------------------------------------------------------------------------------------
 }

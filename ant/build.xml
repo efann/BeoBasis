@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ =============================================================================
-  ~ BeoBasis: a library of common routines for Java Swing programs.
+  ~ BeoBasis: a library of common routines for Java programs written by
+  ~           Beowurks.
   ~ =============================================================================
   ~ Copyright(c) 2001-2019, by Beowurks.
   ~
@@ -25,7 +26,7 @@
 
   <property name="project.title" value="BeoBasis"/>
   <property name="project.name" value="BeoBasis"/>
-  <property name="project.version" value="2.0.11"/>
+  <property name="project.version" value="2.0.5"/>
   <property name="project.jar.filename" value="${project.name}-${project.version}.jar"/>
   <property name="project.jar.filename.unsigned" value="${project.name}-unsigned.jar"/>
 

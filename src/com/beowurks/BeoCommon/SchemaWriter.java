@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -63,7 +64,7 @@ public class SchemaWriter extends XMLTextWriter
         }
 
         if (!((laField[0] instanceof String) && (laField[1] instanceof String)
-            && (laField[2] instanceof Integer) && (laField[3] instanceof Integer)))
+                && (laField[2] instanceof Integer) && (laField[3] instanceof Integer)))
         {
           throw new Exception("Field array should have 4 columns Field Name, Field Type, Field Length, Field Decimals.");
         }
@@ -87,26 +88,26 @@ public class SchemaWriter extends XMLTextWriter
     try
     {
       this.createRootNode("xsd:schema", new Object[][]{{"id", this.fcSchemaID},
-          {"xmlns:xsd", "http://www.w3.org/2001/XMLSchema"},
-          {"xmlns:msdata", "urn:schemas-microsoft-com:xml-msdata"}});
+              {"xmlns:xsd", "http://www.w3.org/2001/XMLSchema"},
+              {"xmlns:msdata", "urn:schemas-microsoft-com:xml-msdata"}});
 
       final Node loElementName = this.appendNodeToRoot("xsd:element", (String) null, new Object[][]{
-          {"name", this.fcSchemaID}, {"msdata:IsDataSet", "true"}});
+              {"name", this.fcSchemaID}, {"msdata:IsDataSet", "true"}});
 
       final Node loComplexType1 = this.appendToNode(loElementName, "xsd:complexType", (String) null, null);
 
       final Node loChoice = this.appendToNode(loComplexType1, "xsd:choice", (String) null, new Object[][]{{
-          "maxOccurs", "unbounded"}});
+              "maxOccurs", "unbounded"}});
 
       final Node loElementRecords = this.appendToNode(loChoice, "xsd:element", (String) null, new Object[][]{
-          {"name", SchemaWriter.RECORDS_LABEL}, {"minOccurs", "0"}, {"maxOccurs", "unbounded"}});
+              {"name", SchemaWriter.RECORDS_LABEL}, {"minOccurs", "0"}, {"maxOccurs", "unbounded"}});
 
       final Node loComplexType2 = this.appendToNode(loElementRecords, "xsd:complexType", (String) null, null);
 
       this.foSequence = this.appendToNode(loComplexType2, "xsd:sequence", (String) null, null);
 
       this.appendToNode(loComplexType1, "xsd:anyAttribute", (String) null, new Object[][]{
-          {"namespace", "http://www.w3.org/XML/1998/namespace"}, {"processContents", "lax"}});
+              {"namespace", "http://www.w3.org/XML/1998/namespace"}, {"processContents", "lax"}});
     }
     catch (final Exception loErr)
     {
@@ -129,25 +130,25 @@ public class SchemaWriter extends XMLTextWriter
       for (final Object[] laField : this.faFields)
       {
         final Node loName = this.appendToNode(loSequence, "xsd:element", (String) null, new Object[][]{{"name",
-            laField[0]}});
+                laField[0]}});
 
         final Node loSimpleType = this.appendToNode(loName, "xsd:simpleType", (String) null, null);
 
         final String lcFieldType = laField[1].toString();
         final Node loRestriction = this.appendToNode(loSimpleType, "xsd:restriction", (String) null, new Object[][]{{
-            "base", lcFieldType}});
+                "base", lcFieldType}});
 
         if (lcFieldType.compareTo(SchemaWriter.FIELDTYPE_STRING) == 0)
         {
           this.appendToNode(loRestriction, "xsd:maxLength", (String) null, new Object[][]{{"value",
-              laField[2].toString()}});
+                  laField[2].toString()}});
         }
         else if (lcFieldType.compareTo(SchemaWriter.FIELDTYPE_NUMBER) == 0)
         {
           this.appendToNode(loRestriction, "xsd:totalDigits", (String) null, new Object[][]{{"value",
-              laField[2].toString()}});
+                  laField[2].toString()}});
           this.appendToNode(loRestriction, "xsd:fractionDigits", (String) null, new Object[][]{{"value",
-              laField[3].toString()}});
+                  laField[3].toString()}});
         }
         else
         {

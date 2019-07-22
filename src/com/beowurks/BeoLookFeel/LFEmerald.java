@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -20,8 +21,8 @@ import javax.swing.plaf.metal.DefaultMetalTheme;
  * This class describes a theme using glowing green colors.
  *
  * @author Jeff Dinkins
- * <p/>
- * Modified by Eddie Fann, August, 2005
+ *         <p/>
+ *         Modified by Eddie Fann, August, 2005
  * @version 1.9 07/26/04
  */
 // ---------------------------------------------------------------------------------------------------------------------

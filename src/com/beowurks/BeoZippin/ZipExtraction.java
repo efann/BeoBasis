@@ -1,6 +1,7 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java Swing programs.
+ * BeoBasis: a library of common routines for Java programs written by
+ *           Beowurks.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -158,7 +159,7 @@ public class ZipExtraction
         loFileOutput = null;
 
         final String lcOutputFullName = this.fcStartDirectory
-            + (this.flUsePath ? loEntry.getName() : Util.extractFileName(loEntry.getName(), "/"));
+                + (this.flUsePath ? loEntry.getName() : Util.extractFileName(loEntry.getName(), "/"));
 
         boolean llWrite = true;
         if (!this.flOverwriteExisting)
@@ -204,7 +205,7 @@ public class ZipExtraction
           if (loFile.length() != loEntry.getSize())
           {
             throw (new Exception("The file size for " + loFile.getPath() + " does not match the file size of "
-                + loEntry.getName() + " found in the archive file of " + this.fcArchiveName + "."));
+                    + loEntry.getName() + " found in the archive file of " + this.fcArchiveName + "."));
           }
         }
       }
@@ -281,7 +282,7 @@ public class ZipExtraction
         loFileOutput = null;
 
         final String lcOutputFullName = this.fcStartDirectory
-            + (this.flUsePath ? loEntry.getName() : Util.extractFileName(loEntry.getName(), "/"));
+                + (this.flUsePath ? loEntry.getName() : Util.extractFileName(loEntry.getName(), "/"));
 
         boolean llWrite = true;
         if (!this.flOverwriteExisting)
@@ -327,7 +328,7 @@ public class ZipExtraction
           if (loFile.length() != loEntry.getSize())
           {
             throw (new Exception("The file size for " + loFile.getPath() + " does not match the file size of "
-                + loEntry.getName() + " found in the archive file of " + this.fcArchiveName + "."));
+                    + loEntry.getName() + " found in the archive file of " + this.fcArchiveName + "."));
           }
         }
       }
@@ -372,9 +373,9 @@ public class ZipExtraction
       }
 
       final String lcQuestion = "Replace\n" + tcFileName + "\n" + this.foByteDecimalFormat.format(loFile.length())
-          + " bytes\n" + this.foRegularDateFormat.format(new Date(loFile.lastModified())) + "\n\n\twith\n\n"
-          + toEntry.getName() + "\n" + this.foByteDecimalFormat.format(toEntry.getSize()) + " bytes\n"
-          + this.foRegularDateFormat.format(new Date(toEntry.getTime())) + "\n\n";
+              + " bytes\n" + this.foRegularDateFormat.format(new Date(loFile.lastModified())) + "\n\n\twith\n\n"
+              + toEntry.getName() + "\n" + this.foByteDecimalFormat.format(toEntry.getSize()) + " bytes\n"
+              + this.foRegularDateFormat.format(new Date(toEntry.getTime())) + "\n\n";
 
       final int lnResults = ZipCommon.yesNoAllCancel(this.foFrame, this.foFrame.getTitle(), lcQuestion);
 

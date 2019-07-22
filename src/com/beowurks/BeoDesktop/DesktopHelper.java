@@ -40,7 +40,7 @@ public class DesktopHelper
           tiDesktopAdapter.AboutHandler()
       );
     }
-    catch (Exception loError)
+    catch (final Exception loError)
     {
     }
 
@@ -50,7 +50,7 @@ public class DesktopHelper
           tiDesktopAdapter.PreferencesHandler()
       );
     }
-    catch (Exception loError)
+    catch (final Exception loError)
     {
     }
 
@@ -60,7 +60,7 @@ public class DesktopHelper
           tiDesktopAdapter.QuitHandler()
       );
     }
-    catch (Exception loError)
+    catch (final Exception loError)
     {
     }
 

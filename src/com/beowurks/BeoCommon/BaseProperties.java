@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -14,6 +13,11 @@
 
 package com.beowurks.BeoCommon;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,12 +30,6 @@ import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Properties;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

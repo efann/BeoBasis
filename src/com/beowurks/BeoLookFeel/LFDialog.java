@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -19,13 +18,6 @@ import com.beowurks.BeoCommon.BaseDialog;
 import com.beowurks.BeoCommon.BaseTabbedPane;
 import com.beowurks.BeoCommon.GridBagLayoutHelper;
 
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.GridBagConstraints;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Enumeration;
-
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -38,6 +30,12 @@ import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
+import java.awt.Component;
+import java.awt.Cursor;
+import java.awt.GridBagConstraints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -186,7 +184,7 @@ public class LFDialog extends BaseDialog implements ActionListener
     if (this.foButtonGroup1.getSelection() == null)
     {
       throw new Exception(
-              "The button groups have not been initialized in the routine setupTabPanes in LookAndFeelDialog.");
+          "The button groups have not been initialized in the routine setupTabPanes in LookAndFeelDialog.");
     }
 
     this.tabPane1.add("Look & Feels", this.pnlLookFeels1);
@@ -235,9 +233,9 @@ public class LFDialog extends BaseDialog implements ActionListener
     this.getContentPane().setLayout(loGridBag);
 
     this.getContentPane().add(this.tabPane1,
-            loGridBag.getConstraint(0, 3, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
+        loGridBag.getConstraint(0, 3, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
     this.getContentPane().add(this.boxButtons1,
-            loGridBag.getConstraint(0, 5, GridBagConstraints.CENTER, GridBagConstraints.NONE));
+        loGridBag.getConstraint(0, 5, GridBagConstraints.CENTER, GridBagConstraints.NONE));
   }
 
   // ---------------------------------------------------------------------------------------------------------------------

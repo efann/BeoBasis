@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -23,6 +22,7 @@
 //
 package com.beowurks.BeoTable;
 
+import javax.swing.table.DefaultTableModel;
 import java.io.Serializable;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -30,8 +30,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Vector;
-
-import javax.swing.table.DefaultTableModel;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

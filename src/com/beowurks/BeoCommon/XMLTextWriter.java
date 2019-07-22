@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -19,12 +18,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.Text;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.Date;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -35,6 +28,11 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.Date;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -121,9 +119,9 @@ public class XMLTextWriter
     {
       loNode = null;
       Util.errorMessage(
-              null,
-              "There was an error in appending node to the root.\nREMEMBER: no spaces, etc in Tag names.\n\n"
-                      + loErr.getMessage());
+          null,
+          "There was an error in appending node to the root.\nREMEMBER: no spaces, etc in Tag names.\n\n"
+              + loErr.getMessage());
     }
 
     return (loNode);
@@ -182,9 +180,9 @@ public class XMLTextWriter
     {
       loNode = null;
       Util.errorMessage(
-              null,
-              "There was an error in appending node to another node.\nREMEMBER: no spaces, etc in Tag names.\n\n"
-                      + loErr.getMessage());
+          null,
+          "There was an error in appending node to another node.\nREMEMBER: no spaces, etc in Tag names.\n\n"
+              + loErr.getMessage());
     }
 
     return (loNode);
@@ -216,9 +214,9 @@ public class XMLTextWriter
     {
       this.foRoot = null;
       Util.errorMessage(
-              null,
-              "There was an error in creating the Root Node.\nREMEMBER: no spaces, etc in Tag names.\n\n"
-                      + loErr.getMessage());
+          null,
+          "There was an error in creating the Root Node.\nREMEMBER: no spaces, etc in Tag names.\n\n"
+              + loErr.getMessage());
     }
 
     return (this.foRoot);
@@ -262,12 +260,12 @@ public class XMLTextWriter
     catch (final TransformerConfigurationException loErr)
     {
       Util.errorMessage(null, "There was a Transformer Configuration Exception in generating an XML string.\n\n"
-              + loErr.getMessage());
+          + loErr.getMessage());
     }
     catch (final TransformerFactoryConfigurationError loErr)
     {
       Util.errorMessage(null, "There was a Transformer Factory Configuration Error in generating an XML string.\n\n"
-              + loErr.getMessage());
+          + loErr.getMessage());
     }
     catch (final TransformerException loErr)
     {
@@ -342,13 +340,13 @@ public class XMLTextWriter
     {
       llOkay = false;
       Util.errorMessage(null, "There was a Transformer Configuration Exception in saving the XML data to file.\n\n"
-              + loErr.getMessage());
+          + loErr.getMessage());
     }
     catch (final TransformerFactoryConfigurationError loErr)
     {
       llOkay = false;
       Util.errorMessage(null, "There was a Transformer Factory Configuration Error in saving the XML data to file.\n\n"
-              + loErr.getMessage());
+          + loErr.getMessage());
     }
     catch (final IOException loErr)
     {
@@ -359,7 +357,7 @@ public class XMLTextWriter
     {
       llOkay = false;
       Util.errorMessage(null,
-              "There was a Transformer Exception in saving the XML data to file.\n\n" + loErr.getMessage());
+          "There was a Transformer Exception in saving the XML data to file.\n\n" + loErr.getMessage());
     }
 
     if (this.flDeleteOnExit)

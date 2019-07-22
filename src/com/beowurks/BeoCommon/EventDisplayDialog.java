@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -14,6 +13,9 @@
 
 package com.beowurks.BeoCommon;
 
+import javax.swing.*;
+import javax.swing.border.EtchedBorder;
+import javax.swing.table.DefaultTableModel;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -27,20 +29,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
-
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingUtilities;
-import javax.swing.border.EtchedBorder;
-import javax.swing.table.DefaultTableModel;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -184,7 +172,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
   private void setupLabels()
   {
     this.lblTimeLapsed1.setText("<html><font face=\"Arial\"><i>" + this.getTitle()
-            + " is running. . . .</i></font></html>");
+        + " is running. . . .</i></font></html>");
 
     this.lblTitle1.setText("Event Display");
     this.lblTitle1.setFont(this.lblTitle1.getFont().deriveFont(Font.ITALIC));
@@ -213,17 +201,17 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
 
     loGrid.setInsets(4, 4, 0, 4);
     this.getContentPane().add(this.lblTitle1,
-            loGrid.getConstraint(0, 0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
+        loGrid.getConstraint(0, 0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL));
     loGrid.setInsets(0, 4, 4, 4);
     this.getContentPane().add(this.scrEvents1,
-            loGrid.getConstraint(0, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
+        loGrid.getConstraint(0, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
     loGrid.setInsetDefaults();
     this.getContentPane().add(this.lblTimeLapsed1,
-            loGrid.getConstraint(0, 2, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL));
+        loGrid.getConstraint(0, 2, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL));
     this.getContentPane().add(this.barEventProgress1,
-            loGrid.getConstraint(0, 3, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL));
+        loGrid.getConstraint(0, 3, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL));
     this.getContentPane().add(this.boxButtons1,
-            loGrid.getConstraint(0, 4, GridBagConstraints.CENTER, GridBagConstraints.NONE));
+        loGrid.getConstraint(0, 4, GridBagConstraints.CENTER, GridBagConstraints.NONE));
   }
 
   // ---------------------------------------------------------------------------------------------------------------------
@@ -260,7 +248,7 @@ public class EventDisplayDialog extends BaseDialog implements ActionListener, Ru
   private void setupProgressBars()
   {
     final Dimension ldSize = new Dimension(EventDisplayDialog.PREFERRED_WIDTH, (int) this.barEventProgress1
-            .getPreferredSize().getHeight() + 2);
+        .getPreferredSize().getHeight() + 2);
 
     this.barEventProgress1.setPreferredSize(ldSize);
     this.barEventProgress1.setMinimumSize(ldSize);

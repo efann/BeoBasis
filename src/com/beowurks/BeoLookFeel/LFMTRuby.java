@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -21,10 +20,10 @@ import javax.swing.plaf.metal.DefaultMetalTheme;
  * This class describes a theme using red colors.
  *
  * @author Jeff Dinkins
- *         <p/>
- *         Modified by Eddie Fann, August, 2005
- *         <p/>
- *         From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/RubyTheme.java
+ * <p/>
+ * Modified by Eddie Fann, August, 2005
+ * <p/>
+ * From the file, jdk1.5.0_04/demo/jfc/SwingSet2/src/RubyTheme.java
  * @version 1.9 07/26/04
  */
 // ---------------------------------------------------------------------------------------------------------------------

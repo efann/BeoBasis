@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -16,9 +15,6 @@ package com.beowurks.BeoLookFeel;
 
 import com.beowurks.BeoCommon.Util;
 
-import java.awt.Frame;
-import java.awt.Window;
-
 import javax.swing.LookAndFeel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
@@ -26,6 +22,8 @@ import javax.swing.plaf.metal.DefaultMetalTheme;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.MetalTheme;
 import javax.swing.plaf.metal.OceanTheme;
+import java.awt.Frame;
+import java.awt.Window;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -208,9 +206,9 @@ public final class LFCommon
         catch (final Exception loErr)
         {
           Util.errorMessage(
-                  null,
-                  "There was an error in initializing LFCommon.faThemeInfos. Notify support@beowurks.com.\n\n"
-                          + loErr.getMessage());
+              null,
+              "There was an error in initializing LFCommon.faThemeInfos. Notify support@beowurks.com.\n\n"
+                  + loErr.getMessage());
         }
       }
     }

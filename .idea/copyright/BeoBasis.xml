@@ -1,7 +1,7 @@
 <component name="CopyrightManager">
   <copyright>
     <option name="allowReplaceRegexp" value="Copyright" />
-    <option name="notice" value="=============================================================================&#10;BeoBasis: a library of common routines for Java programs written by&#10;          Beowurks.&#10;=============================================================================&#10;Copyright(c) 2001-&amp;#36;today.year, by Beowurks.&#10;&#10;This application is open-source software; you can redistribute it and/or modify it&#10;under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).&#10;&#10;Original Author:  Eddie Fann&#10;Contributor(s):   -;" />
+    <option name="notice" value="=============================================================================&#10;BeoBasis: a library of common routines for Java Swing programs.&#10;=============================================================================&#10;Copyright(c) 2001-&amp;#36;today.year, by Beowurks.&#10;&#10;This application is open-source software; you can redistribute it and/or modify it&#10;under the terms of the Eclipse Public License, Version 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html).&#10;&#10;Original Author:  Eddie Fann&#10;Contributor(s):   -;" />
     <option name="myName" value="BeoBasis" />
   </copyright>
 </component>

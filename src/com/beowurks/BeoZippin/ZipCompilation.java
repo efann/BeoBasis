@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -243,7 +242,7 @@ public class ZipCompilation
     }
 
     this.foSwingProgressComponents.updateDescription("Removing selected files from " + this.fcArchiveName
-            + " (and saving all others). . . .");
+        + " (and saving all others). . . .");
 
     FileOutputStream loArchiveTempFile = null;
     ZipOutputStream loZipOutputTempStream = null;
@@ -335,14 +334,14 @@ public class ZipCompilation
         if (lnOriginalCRC != lnCopyCRC)
         {
           final String lcMessage = "Incorrect CRC value of "
-                  + Long.toHexString(((Long) lnCopyCRC).longValue()).toUpperCase() + ". Instead, it should be "
-                  + Long.toHexString(((Long) lnOriginalCRC).longValue()).toUpperCase() + ".";
+              + Long.toHexString(((Long) lnCopyCRC).longValue()).toUpperCase() + ". Instead, it should be "
+              + Long.toHexString(((Long) lnOriginalCRC).longValue()).toUpperCase() + ".";
           throw (new Exception(lcMessage));
         }
         if (lnOriginalSize != lnCopySize)
         {
           final String lcMessage = "Incorrect file size of " + lnCopySize + ". Instead, it should be " + lnOriginalSize
-                  + ".";
+              + ".";
           throw (new Exception(lcMessage));
         }
 
@@ -361,7 +360,7 @@ public class ZipCompilation
       else
       {
         final String lcMessage = "The following error occurred with " + loOriginalEntry.getName() + ": "
-                + loErr.getMessage();
+            + loErr.getMessage();
         loException = new Exception(lcMessage);
       }
     }
@@ -500,14 +499,14 @@ public class ZipCompilation
         if (lnOriginalCRC != lnCopyCRC)
         {
           final String lcMessage = "Incorrect CRC value of "
-                  + Long.toHexString(((Long) lnCopyCRC).longValue()).toUpperCase() + ". Instead, it should be "
-                  + Long.toHexString(((Long) lnOriginalCRC).longValue()).toUpperCase() + ".";
+              + Long.toHexString(((Long) lnCopyCRC).longValue()).toUpperCase() + ". Instead, it should be "
+              + Long.toHexString(((Long) lnOriginalCRC).longValue()).toUpperCase() + ".";
           throw (new Exception(lcMessage));
         }
         if (lnOriginalSize != lnCopySize)
         {
           final String lcMessage = "Incorrect file size of " + lnCopySize + ". Instead, it should be " + lnOriginalSize
-                  + ".";
+              + ".";
           throw (new Exception(lcMessage));
         }
 

@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -16,10 +15,9 @@ package com.beowurks.BeoZippin;
 
 import com.beowurks.BeoCommon.Util;
 
-import java.awt.Window;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import java.awt.Window;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -45,7 +43,7 @@ public final class ZipCommon
   static protected void errorExceptionInThread(final Window toWindow, final String tcException)
   {
     ZipCommon.errorExceptionInThread(toWindow, "Please notify support@beowurks.com of the following error:",
-            tcException);
+        tcException);
   }
 
   // ---------------------------------------------------------------------------------------------------------------------
@@ -82,7 +80,7 @@ public final class ZipCommon
   static protected int yesNoAllCancel(final Window toWindow, final String tcTitle, final String tcMessage)
   {
     final int lnResults = JOptionPane.showOptionDialog(toWindow, tcMessage, tcTitle, JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.QUESTION_MESSAGE, null, ZipCommon.faYesNoAllCancelChoices, ZipCommon.faYesNoAllCancelChoices[0]);
+        JOptionPane.QUESTION_MESSAGE, null, ZipCommon.faYesNoAllCancelChoices, ZipCommon.faYesNoAllCancelChoices[0]);
 
     if ((lnResults >= 0) && (lnResults < ZipCommon.faYesNoAllCancelChoices.length))
     {

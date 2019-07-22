@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -16,7 +15,6 @@ package com.beowurks.BeoZippin;
 
 import com.beowurks.BeoCommon.XMLTextReader;
 import com.beowurks.BeoCommon.XMLTextWriter;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -227,7 +225,7 @@ public class ZipComment
           lnReadPos = lnSizeFile - lnBackRead;
 
           lnReadSize = ((ZipComment.BUFREADCOMMENT + 4) < (lnSizeFile - lnReadPos)) ? (ZipComment.BUFREADCOMMENT + 4)
-                  : (lnSizeFile - lnReadPos);
+              : (lnSizeFile - lnReadPos);
           toFileStream.seek(lnReadPos);
 
           lnReadSize = toFileStream.read(laBuffer);
@@ -239,7 +237,7 @@ public class ZipComment
           for (int i = lnReadSize - 3; i > 0; i--)
           {
             if ((laBuffer[i] == 0x50) && (laBuffer[i + 1] == 0x4b) && (laBuffer[i + 2] == 0x05)
-                    && (laBuffer[i + 3] == 0x06))
+                && (laBuffer[i + 3] == 0x06))
             {
               lnPosFound = lnReadPos + i;
               break;

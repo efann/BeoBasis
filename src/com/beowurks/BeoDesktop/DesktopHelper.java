@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -13,8 +12,6 @@
  */
 
 package com.beowurks.BeoDesktop;
-
-import com.beowurks.BeoCommon.Util;
 
 import java.awt.Desktop;
 
@@ -31,7 +28,8 @@ public class DesktopHelper
 
   // ---------------------------------------------------------------------------------------------------------------------
   // Apparently, running on Windows throws errors for these routines as they are not supported.
-  // But, that's okay, as I just need them to function on Apple or OS X.
+  // But, that's okay, as I just need them to function on Apple or OS X. By the way, I tested these routines,
+  // and they work.
   static public void setupDesktop(final IDesktopAdapter tiDesktopAdapter)
   {
     final Desktop loDesktop = Desktop.getDesktop();

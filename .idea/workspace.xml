@@ -1,7 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae30d00d-a2b5-491b-abd2-61cb7e3e3dee" name="Default" comment="" />
+    <list default="true" id="ae30d00d-a2b5-491b-abd2-61cb7e3e3dee" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/BeoBasis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/BeoBasis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ant/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ant/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFileFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFileFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFormattedField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFormattedField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFormattedNumberField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFormattedNumberField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseInternalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseTabbedPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseTabbedPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseTextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseXMLData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseXMLData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/CancelDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/CancelDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/AboutAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/AboutAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/DialogAbout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/DialogAbout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/IAbout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/IAbout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/CreditAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/CreditAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/ICredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/ICredit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/EventDisplayDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/EventDisplayDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDateField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDateField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/GridBagLayoutHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/GridBagLayoutHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/HTMLTableWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/HTMLTableWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SchemaWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SchemaWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SmallToggleButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SmallToggleButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/TextUpperCaseField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/TextUpperCaseField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/WaitCursorRoutines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/WaitCursorRoutines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IDesktopAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IDesktopAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBaseStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBaseStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportCommaQuoteDelimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportCommaQuoteDelimiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportExcel21.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportExcel21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportTabDelimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportTabDelimiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFEmerald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFEmerald.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTAqua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTAqua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTCharcoal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTCharcoal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTContrast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTContrast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTRuby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTRuby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/MetalThemeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/MetalThemeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortButtonRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortButtonRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoTable/TableCellPaddedRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoTable/TableCellPaddedRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/BuildFileList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/BuildFileList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/FileIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/FileIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/IZipProgressComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/IZipProgressComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/SwingProgressComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/SwingProgressComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadCompile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadCompile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadExtract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadExtract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadPopulateZipTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadPopulateZipTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCompilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCompilation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipExtraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipTesting.java" afterDir="false" />
+    </list>
     <ignored path="BeoBasis.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,29 +147,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ant/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="459">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IDesktopAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -195,7 +261,7 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -241,6 +307,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,8 +343,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,13 +561,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21743000" />
+    <option name="totallyTimeSpent" value="22446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6732283" visible="true" weight="0.20842217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6732283" visible="true" weight="0.21055438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -521,7 +586,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3229491" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32917964" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.211838" />
       <window_info anchor="bottom" id="SVN Properties" order="13" weight="0.32928064" />
       <window_info anchor="bottom" id="SVN Repositories" order="14" weight="0.32928064" />
       <window_info anchor="bottom" id="CheckStyle" order="15" weight="0.32905984" />
@@ -541,6 +606,48 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -722,9 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/ReleaseNotes.txt" />
     <entry file="file://$PROJECT_DIR$/src/com/beowurks/apple/eawt/OSXAdapter.java" />
     <entry file="file://$PROJECT_DIR$/out/production/BeoBasis/build.xml" />
@@ -861,15 +966,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="459">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>

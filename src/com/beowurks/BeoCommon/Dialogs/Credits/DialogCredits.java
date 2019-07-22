@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -20,19 +19,18 @@ import com.beowurks.BeoCommon.Dialogs.JEditorPaneFixHTML;
 import com.beowurks.BeoCommon.GridBagLayoutHelper;
 import com.beowurks.BeoCommon.Util;
 
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Vector;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -134,9 +132,9 @@ public class DialogCredits extends BaseDialog implements ActionListener
     loGrid.setInsets(10, 4, 10, 4);
 
     this.getContentPane().add(this.txtCredits1.getScrollPane(),
-            loGrid.getConstraint(0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
+        loGrid.getConstraint(0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH));
     this.getContentPane().add(this.btnClose1,
-            loGrid.getConstraint(0, 1, GridBagConstraints.EAST, GridBagConstraints.NONE));
+        loGrid.getConstraint(0, 1, GridBagConstraints.EAST, GridBagConstraints.NONE));
   }
 
   // ---------------------------------------------------------------------------------------------------------------------

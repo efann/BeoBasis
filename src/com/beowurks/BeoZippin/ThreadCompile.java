@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -18,12 +17,11 @@ import com.beowurks.BeoCommon.BaseFrame;
 import com.beowurks.BeoCommon.CancelDialog;
 import com.beowurks.BeoCommon.Util;
 
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Date;
-
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -130,7 +128,7 @@ public class ThreadCompile extends Thread
       {
         final String lcParent = loFileMask.getParent();
         llOkay = Util.isWindows() ? (lcParent.compareTo(lcSaveFolderRoot) == 0) : (lcParent
-                .compareToIgnoreCase(lcSaveFolderRoot) == 0);
+            .compareToIgnoreCase(lcSaveFolderRoot) == 0);
       }
 
       if (!llOkay)
@@ -138,7 +136,7 @@ public class ThreadCompile extends Thread
         llSaveFolderInformation = true;
         lcSaveFolderRoot = null;
         ZipCommon.errorException(this.foFrame,
-                "Unable to determine the Folder Root! The path information will be saved.");
+            "Unable to determine the Folder Root! The path information will be saved.");
       }
     }
 
@@ -179,8 +177,8 @@ public class ThreadCompile extends Thread
       if (!this.foSwingProgressComponents.isCanceled())
       {
         final ZipCompilation loZip = new ZipCompilation(lcFileName, this.foBuildFileList.getFileList(),
-                this.fnCompressionLevel, this.flSaveFolderInformation, this.fcSaveFolderRoot, this.fcComment,
-                this.foSwingProgressComponents);
+            this.fnCompressionLevel, this.flSaveFolderInformation, this.fcSaveFolderRoot, this.fcComment,
+            this.foSwingProgressComponents);
 
         loZip.zipFiles();
       }
@@ -196,7 +194,7 @@ public class ThreadCompile extends Thread
     {
       llOkay = false;
       ZipCommon.errorExceptionInThread(this.foFrame, "There was an error in creating the archive, <b>" + lcFileName
-              + "</b>.", loErr.toString());
+          + "</b>.", loErr.toString());
     }
     finally
     {
@@ -215,20 +213,20 @@ public class ThreadCompile extends Thread
     else if (llOkay)
     {
       Util.infoMessageInThread(
-              this.foFrame,
-              new JLabel("<html><font face=\"Arial\"><i><b>" + lcFileName
-                      + "</i></b> has been successfully created in the popular Zip format!<br><br><i>("
-                      + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
+          this.foFrame,
+          new JLabel("<html><font face=\"Arial\"><i><b>" + lcFileName
+              + "</i></b> has been successfully created in the popular Zip format!<br><br><i>("
+              + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
     }
     else
     {
       Util.errorMessageInThread(
-              this.foFrame,
-              new JLabel(
-                      "<html><font face=\"Arial\">There was an error in creating <i><b>"
-                              + lcFileName
-                              + "</i></b>!<br><br>- Ensure that the folder exists.<br>- Ensure there is adequate disk space on the backup drive.<br>- If removable media, make sure there is a disk or CD in the targeted drive.<br>- Check that the zipped file itself is not open in some other program.<br>- Try a different encryption method (found on the menu under Tools->Options...).<br>- If using a UDF-formatted CD, the CD might be over-reporting the amount of free space.<br><br><i>("
-                              + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
+          this.foFrame,
+          new JLabel(
+              "<html><font face=\"Arial\">There was an error in creating <i><b>"
+                  + lcFileName
+                  + "</i></b>!<br><br>- Ensure that the folder exists.<br>- Ensure there is adequate disk space on the backup drive.<br>- If removable media, make sure there is a disk or CD in the targeted drive.<br>- Check that the zipped file itself is not open in some other program.<br>- Try a different encryption method (found on the menu under Tools->Options...).<br>- If using a UDF-formatted CD, the CD might be over-reporting the amount of free space.<br><br><i>("
+                  + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
     }
 
     this.finishRoutine();
@@ -238,7 +236,7 @@ public class ThreadCompile extends Thread
   private void buildList()
   {
     this.foBuildFileList = new BuildFileList(this.foSwingProgressComponents, this.flRecurse,
-            this.flIncludeHiddenDirectories, this.flIncludeHiddenFiles);
+        this.flIncludeHiddenDirectories, this.flIncludeHiddenFiles);
 
     if (this.faFolders != null)
     {
@@ -267,7 +265,7 @@ public class ThreadCompile extends Thread
         try
         {
           ThreadCompile.this.fmFinishCallbackMethod.invoke(ThreadCompile.this.foFinishCallbackObject,
-                  ThreadCompile.this.faFinishParameters);
+              ThreadCompile.this.faFinishParameters);
         }
         catch (final Exception ignored)
         {

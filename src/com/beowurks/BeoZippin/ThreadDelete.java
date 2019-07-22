@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -18,13 +17,12 @@ import com.beowurks.BeoCommon.BaseFrame;
 import com.beowurks.BeoCommon.CancelDialog;
 import com.beowurks.BeoCommon.Util;
 
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Vector;
-
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -96,7 +94,7 @@ public class ThreadDelete extends Thread
       if (!this.foSwingProgressComponents.isCanceled())
       {
         final ZipCompilation loZip = new ZipCompilation(lcFileName, this.foFileList, this.fnCompressionLevel, true,
-                null, lcComment, this.foSwingProgressComponents);
+            null, lcComment, this.foSwingProgressComponents);
 
         loZip.deleteFiles();
       }
@@ -112,7 +110,7 @@ public class ThreadDelete extends Thread
     {
       llOkay = false;
       ZipCommon.errorExceptionInThread(this.foFrame, "There was an error in removing files from the archive, <b>"
-              + lcFileName + "</b>.", loErr.toString());
+          + lcFileName + "</b>.", loErr.toString());
     }
     finally
     {
@@ -131,17 +129,17 @@ public class ThreadDelete extends Thread
     else if (llOkay)
     {
       Util.infoMessageInThread(
-              this.foFrame,
-              new JLabel("<html><font face=\"Arial\"><i><b>" + lcFileName
-                      + "</i></b> has been successfully created in the popular Zip format!<br><br><i>("
-                      + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
+          this.foFrame,
+          new JLabel("<html><font face=\"Arial\"><i><b>" + lcFileName
+              + "</i></b> has been successfully created in the popular Zip format!<br><br><i>("
+              + Util.displayTimeDifference(loDateBegin, new Date(), 1) + ")</i><br></font></html>"));
     }
     else
     {
       Util.errorMessageInThread(this.foFrame, new JLabel(
-              "<html><font face=\"Arial\">There was an error in removing files from <i><b>" + lcFileName
-                      + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
-                      + ")</i><br></font></html>"));
+          "<html><font face=\"Arial\">There was an error in removing files from <i><b>" + lcFileName
+              + "</i></b>!<br><br><i>(" + Util.displayTimeDifference(loDateBegin, new Date(), 1)
+              + ")</i><br></font></html>"));
     }
 
     this.finishRoutine();
@@ -177,7 +175,7 @@ public class ThreadDelete extends Thread
         try
         {
           ThreadDelete.this.fmFinishCallbackMethod.invoke(ThreadDelete.this.foFinishCallbackObject,
-                  ThreadDelete.this.faFinishParameters);
+              ThreadDelete.this.faFinishParameters);
         }
         catch (final Exception ignored)
         {

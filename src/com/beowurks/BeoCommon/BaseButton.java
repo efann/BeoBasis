@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -14,11 +13,10 @@
 
 package com.beowurks.BeoCommon;
 
-import java.awt.Cursor;
-import java.awt.Dimension;
-
 import javax.swing.JButton;
 import javax.swing.border.EmptyBorder;
+import java.awt.Cursor;
+import java.awt.Dimension;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

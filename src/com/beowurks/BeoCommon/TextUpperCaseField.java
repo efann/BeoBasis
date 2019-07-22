@@ -1,7 +1,6 @@
 /*
  * =============================================================================
- * BeoBasis: a library of common routines for Java programs written by
- *           Beowurks.
+ * BeoBasis: a library of common routines for Java Swing programs.
  * =============================================================================
  * Copyright(c) 2001-2019, by Beowurks.
  *
@@ -79,7 +78,7 @@ final class UpperCaseDocument extends PlainDocument
   // ---------------------------------------------------------------------------------------------------------------------
   @Override
   public void insertString(final int tnOffset, final String tcString, final AttributeSet toAttributeSet)
-          throws BadLocationException
+      throws BadLocationException
   {
     if (tcString == null)
     {

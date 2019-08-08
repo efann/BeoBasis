@@ -60,7 +60,7 @@ public final class LFCommon
     // which means
     // menus are in the window instead of the menu bar. When set to true, the
     // Java runtime
-    // moves any given JFrame�s JMenuBar to the top of the screen, where
+    // moves any given JFrame's JMenuBar to the top of the screen, where
     // Macintosh users expect it.
 
     // Allow the look & feel for the Mac to remain the default.
@@ -70,29 +70,24 @@ public final class LFCommon
       return;
     }
 
+    // Awesome: we're no longer guessing at the default Look & Feel.
+    String lcLookFeelClass = (tcLookFeelClass.isEmpty()) ? UIManager.getSystemLookAndFeelClassName() : tcLookFeelClass;
+
     try
     {
-      if (tcLookFeelClass.isEmpty())
+      if (LFCommon.isMetalLookAndFeel(lcLookFeelClass))
       {
-        MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
-        UIManager.setLookAndFeel(new MetalLookAndFeel());
+        final String lcMetalTheme = (!tcMetalTheme.isEmpty()) ? tcMetalTheme : "DefaultMetalTheme";
+        final Class<?> loClass = LFCommon.loadClass(lcMetalTheme);
+        MetalLookAndFeel.setCurrentTheme((MetalTheme) loClass.getDeclaredConstructor().newInstance());
       }
-      else
-      {
-        if (LFCommon.isMetalLookAndFeel(tcLookFeelClass))
-        {
-          final String lcMetalTheme = (!tcMetalTheme.isEmpty()) ? tcMetalTheme : "DefaultMetalTheme";
-          final Class<?> loClass = LFCommon.loadClass(lcMetalTheme);
-          MetalLookAndFeel.setCurrentTheme((MetalTheme) loClass.getDeclaredConstructor().newInstance());
-        }
 
-        try
-        {
-          UIManager.setLookAndFeel(tcLookFeelClass);
-        }
-        catch (final Exception ignore)
-        {
-        }
+      try
+      {
+        UIManager.setLookAndFeel(lcLookFeelClass);
+      }
+      catch (final Exception ignore)
+      {
       }
 
       if (tlAllComponents)

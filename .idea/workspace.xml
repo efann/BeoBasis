@@ -5,12 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ant/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ant/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" afterDir="false" />
     </list>
-    <ignored path="BeoBasis.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,59 +71,12 @@
   <component name="FavoritesManager">
     <favorites_list name="BeoBasis" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ant/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>build.path</find>
-      <find>EAWT</find>
-      <find>com.apple.eawt</find>
-      <find>basedir</find>
-      <find>shouldYieldFocus</find>
-      <find>idea.out.path</find>
-      <find>project.jar</find>
-      <find>setupButton</find>
-      <find>btnClose1</find>
-      <find>compiler.resources</find>
-      <find>serialVersionU</find>
-      <find>//---------------------------------------------------------------------------\n</find>
-      <find>// ---------------------------------------------------------------------------\n</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>// ---------------------------------------------------------------------------------------------------------------------\n</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>D:\IntelliJ\BeoBasis</dir>
-      <dir>D:\IntelliJ\BeoBasis\src\com\beowurks</dir>
-    </dirStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -137,59 +86,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseButton.java" />
-        <option value="D:/temp/hotwcsd-ics.php" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/ICredit.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFormattedField.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseProperties.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFileFilter.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadPopulateZipTable.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/BuildFileList.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportExcel21.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SchemaWriter.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadCompile.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextWriter.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipComment.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCompilation.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseInternalFrame.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDateField.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/WaitCursorRoutines.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFrame.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseXMLData.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/SmallToggleButton.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBase.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBaseStream.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTable.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTableModel.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipExtraction.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/apple/eawt/OSXAdapter.java" />
-        <option value="$PROJECT_DIR$/src/build.xml" />
-        <option value="$PROJECT_DIR$/ReleaseNotes.txt" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/DialogAbout.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/MetalThemInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IOSXAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IDesktopAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java" />
-        <option value="$PROJECT_DIR$/ant/build.xml" />
-      </list>
-    </option>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
@@ -197,6 +93,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
+  <component name="ProjectId" id="1Ojz1bgyN5x29FeMKEabNhI8fJv" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -231,49 +128,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BeoBasis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeoBasis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeoBasis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeoBasis" type="462c0819:PsiDirectoryNode" />
-              <item name="ant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeoBasis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeoBasis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeoBasis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeoBasis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="beowurks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeoBasis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeoBasis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="beowurks" type="462c0819:PsiDirectoryNode" />
-              <item name="BeoDesktop" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
@@ -315,16 +169,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="options.lastSelected" value="preferences.editor" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.29056865" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -489,52 +349,13 @@
       <workItem from="1563462513630" duration="5968000" />
       <workItem from="1563821970938" duration="52000" />
       <workItem from="1563822119805" duration="1231000" />
+      <workItem from="1563912795179" duration="934000" />
+      <workItem from="1564066647858" duration="60000" />
+      <workItem from="1564505582633" duration="1066000" />
+      <workItem from="1564604481068" duration="410000" />
+      <workItem from="1565281825957" duration="4361000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24083000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6732283" visible="true" weight="0.21481876" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" sideWeight="0.6880342" weight="0.1782284" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Persistence" order="7" sideWeight="0.16773504" side_tool="true" weight="0.17712177" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3229491" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.23302938" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Changes" order="8" weight="0.32909784" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3229491" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.211838" />
-      <window_info anchor="bottom" id="SVN Properties" order="13" weight="0.32928064" />
-      <window_info anchor="bottom" id="SVN Repositories" order="14" weight="0.32928064" />
-      <window_info anchor="bottom" id="CheckStyle" order="15" weight="0.32905984" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="17" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info active="true" anchor="right" id="Ant Build" order="1" sideWeight="0.67408377" visible="true" weight="0.16897655" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.16713287" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.19479166" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven" order="9" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -555,20 +376,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -607,427 +415,5 @@
     <MESSAGE value="Now, in com.beowurks.BeoCommon.Dialogs.DialogCredits, txtCredits1 correctly initializes to the top." />
     <MESSAGE value="Updated com.beowurks.BeoTable.SortButtonRenderer to use UIManager.getIcon(&quot;Table.ascendingSortIcon&quot;) / UIManager.getIcon(&quot;Table.descendingSortIcon&quot;) instead of com.beowurks.BeoTable.UpDownIcon." />
     <option name="LAST_COMMIT_MESSAGE" value="Updated com.beowurks.BeoTable.SortButtonRenderer to use UIManager.getIcon(&quot;Table.ascendingSortIcon&quot;) / UIManager.getIcon(&quot;Table.descendingSortIcon&quot;) instead of com.beowurks.BeoTable.UpDownIcon." />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/ant/build.xml">
-      <targetFilters>
-        <filter targetName="build" isVisible="false" />
-        <filter targetName="buildManifest" isVisible="false" />
-        <filter targetName="buildClasses" isVisible="false" />
-        <filter targetName="buildJar" isVisible="false" />
-        <filter targetName="signJar" isVisible="false" />
-        <filter targetName="buildZip" isVisible="false" />
-        <filter targetName="copyAppFiles" isVisible="false" />
-      </targetFilters>
-      <expanded value="true" />
-    </buildFile>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportExcel21.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="242" selection-start-line="242" selection-end-line="242" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/SchemaWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoZippin/ThreadCompile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/XMLTextWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCompilation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="658" selection-start-line="658" selection-end-line="658" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseInternalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="176" column="47" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDateField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/WaitCursorRoutines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="169" column="43" selection-start-line="169" selection-start-column="43" selection-end-line="169" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/lang/StackTraceElement.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="355" column="12" selection-start-line="355" selection-start-column="12" selection-end-line="355" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseXMLData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/SmallToggleButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoExport/ExportBaseStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="2" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoTable/SortingTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipCommon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/apple/eawt/IOSXAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/apple/eawt/OSXAdapterHelper.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoZippin/ZipExtraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE" />
-    <entry file="file://$PROJECT_DIR$/ReleaseNotes.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/apple/eawt/OSXAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/BeoBasis/build.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseEditTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="79" column="59" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseTabbedPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="40" selection-start-line="37" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/JEditorPaneFixHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/Credits/DialogCredits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFMTOceanGreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/FontChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedIntegerField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3536">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedDoubleField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="209" selection-start-line="209" selection-end-line="209" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/FormattedLongField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3536">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/swing/InputVerifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beobasis.properties" />
-    <entry file="file://$PROJECT_DIR$/beobasis.xml" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/Dialogs/About/DialogAbout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3434">
-          <caret line="202" column="58" selection-start-line="202" selection-start-column="58" selection-end-line="202" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/MetalThemeInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="142" column="17" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoCommon/BaseDialog.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/java/awt/desktop/AboutHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/java/awt/desktop/QuitHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/IDesktopAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/beowurks/BeoDesktop/DesktopHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ant/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="Copyright.UI">
-        <settings>
-          <last-edited>BeoBasis</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Apache Derby</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>BeoBasis</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>BeoBasis</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

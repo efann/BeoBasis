@@ -1768,7 +1768,7 @@ public final class Util
   }
 
   // ---------------------------------------------------------------------------------------------------------------------
-// From http://stackoverflow.com/questions/642925/swing-how-do-i-close-a-dialog-when-the-esc-key-is-pressed
+  // From http://stackoverflow.com/questions/642925/swing-how-do-i-close-a-dialog-when-the-esc-key-is-pressed
   public static void addEscapeListener(final JDialog toDialog)
   {
     final ActionListener loActionListener = new ActionListener()
@@ -1784,7 +1784,25 @@ public final class Util
     toDialog.getRootPane().registerKeyboardAction(loActionListener,
         KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
   }
-// ---------------------------------------------------------------------------------------------------------------------
+
+  // ---------------------------------------------------------------------------------------------------------------------
+  public static boolean checkForFontAvailability(final String tcFontFamily)
+  {
+    final String[] laFontNames = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+    final int lnFonts = laFontNames.length;
+
+    for (int i = 0; i < lnFonts; ++i)
+    {
+      // Font family names appear to be case-sensitive as they are returned in proper title case.
+      if (laFontNames[i].equals(tcFontFamily))
+      {
+        return (true);
+      }
+    }
+
+    return (false);
+  }
+  // ---------------------------------------------------------------------------------------------------------------------
 }
 // ---------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------

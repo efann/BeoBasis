@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ant/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ant/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoLookFeel/LFCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beowurks/BeoCommon/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,12 +87,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
   <component name="ProjectId" id="1Ojz1bgyN5x29FeMKEabNhI8fJv" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -354,6 +348,7 @@
       <workItem from="1564505582633" duration="1066000" />
       <workItem from="1564604481068" duration="410000" />
       <workItem from="1565281825957" duration="4361000" />
+      <workItem from="1565358086342" duration="1819000" />
     </task>
     <servers />
   </component>
